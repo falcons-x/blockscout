@@ -179,7 +179,7 @@
             </span>
             <%= subnetwork_title() %>
           </a>
-          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown"> 
             <%= if Enum.count(main_nets) > 0 do %>
               <a class="dropdown-item header division">Mainnets</a>
               <%= for %{url: url, title: title} <- main_nets do %>
@@ -187,16 +187,16 @@
               <% end %>
             <% end %>
             <%= if Enum.count(test_nets) > 0 do %>
-              <a class="dropdown-item header division">Testnets</a>
-              <%= for %{url: url, title: title} <- test_nets do %>
+              <a class="dropdown-item header division">Testnets</a> 
+              <%= for %{url: url, title: title} <- test_nets do %> 
                 <a class="dropdown-item" href="<%= url %>"><%= title %></a>
               <% end %>
             <% end %>
             <%= if Enum.count(other_nets) > 0 do %>
-              <a class="dropdown-item header division">Other Networks</a>
-              <%= for %{url: url, title: title} <- other_nets do %>
+              <a class="dropdown-item header division">Other Networks</a> 
+              <%= for %{url: url, title: title} <- other_nets do %>  
                 <a class="dropdown-item" href="<%= url %>"><%= title %></a>
-              <% end %>
+              <% end %> 
             <% end %>
           </div>
         </li>
@@ -219,6 +219,7 @@
               </div>
               <a href="<%= auth_path(@conn, :profile) %>" class= "dropdown-item">Profile</a>
               <a href="<%= watchlist_path(@conn, :show) %>" class= "dropdown-item">Watch list</a>
+              <a href="<%= tag_address_path(@conn, :index) %>" class= "dropdown-item">Address Tags</a>
               <a href="<%= BlockScoutWeb.LayoutView.sign_out_link %>" class= "dropdown-item">Sign out</a>
             </div>
           </li>
