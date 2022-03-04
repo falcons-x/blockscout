@@ -1,6 +1,6 @@
+<%= if false do %>
 <footer class="footer">
   <div class="footer-body container">
-    <!-- Logo -->
     <div class="row footer-logo-row">
       <div class="col-md-12">
         <%= link to: webapp_url(@conn), class: "footer-brand" do %>
@@ -92,4 +92,32 @@
       </div>
     <% end %>
   </div>
+
 </footer>
+<% else %>
+<footer class="footer">
+  <div class="footer-container container">
+    <% copy_year = current_year() %>
+
+    <p class="title-text">
+      Copyright &copy; 2018 - <%= copy_year %> Function X Foundation. All Rights
+      Reserved.
+    </p>
+
+    <% social_lists = social_lists() %>
+
+    <div class="social-lists">
+    <%= for %{icon: icon, link: link} <- social_lists do %>
+      <a
+        class="social-link"
+        href="<%= link %>"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img class="social-logo" src="/images/footer/<%= icon %>.svg" />
+      </a>
+      <% end %>
+    </div>
+  </div>
+</footer>
+<% end %>

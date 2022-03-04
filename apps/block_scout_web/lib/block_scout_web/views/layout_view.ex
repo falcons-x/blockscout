@@ -33,6 +33,37 @@ defmodule BlockScoutWeb.LayoutView do
       other?: true
     }
   ]
+  @default_social [
+    %{ icon: "forum", name: "Forum", link: "https://forum.functionx.io" },
+    %{ icon: "telegram", name: "Telegram", link: "https://t.me/functionx" },
+    %{
+      icon: "youtube",
+      name: "YouTube",
+      link: "https://www.youtube.com/channel/UCmS83bWNR43jwEOC6EJaOyw"
+    },
+    %{
+      icon: "medium",
+      name: "Medium",
+      link: "https://medium.com/functionx"
+    },
+    %{
+      icon: "facebook",
+      name: "Facebook",
+      link: "https://facebook.com/FunctionX.io/"
+    },
+    %{
+      icon: "twitter",
+      name: "Twitter",
+      link: "http://twitter.com/functionx_io"
+    },
+    %{
+      icon: "discord",
+      name: "Discord",
+      link: "https://discord.com/invite/J6k8arnyEQ"
+    },
+    %{ icon: "github", name: "Github", link: "https://github.com/functionx" },
+    %{ icon: "email", name: "Email", link: "mailto:contact@functionx.io" }
+  ]
 
   alias BlockScoutWeb.SocialMedia
 
@@ -192,6 +223,14 @@ defmodule BlockScoutWeb.LayoutView do
     dropdown_nets()
     |> main_nets()
     |> Enum.filter(&Map.get(&1, :other?))
+  end
+
+  def social_lists do
+    _social_list = @default_social
+  end
+
+  def current_year do
+    Date.utc_today.year
   end
 
   def other_explorers do

@@ -8,16 +8,50 @@ $footer-logo-height: 28px !default;
 $footer-logo-width: auto !default;
 
 .footer {
-  background: $footer-background-color;
+  // background: $footer-background-color;
+  background: #fff;
   color: $footer-text-color;
   font-size: 12px;
   line-height: 1.67;
   margin: 0;
-  padding: 40px 0;
+  // padding: 40px 0;
   position: relative;
+  box-shadow: 0 1px 0 0 rgb(8 10 50 / 8%), 0 -1px 0 0 rgb(8 10 50 / 8%);
+
 
   @media (max-width: $breakpoint-md) {
     width: 100%;
+  }
+
+  .footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+  }
+
+  .title-text {
+    color: rgba(8, 10, 50, 0.5);
+    font-size: 14px;
+    line-height: 1.5em;
+    margin-bottom: 0;
+  }
+
+  .social-link {
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 24px;
+  }
+
+  .social-logo {
+    width: 32px;
+    height: 32px;
+    opacity: 0.2;
+    transition: all .3s ease;
+
+    &:hover {
+      opacity: 0.5;
+    }
   }
 }
 
@@ -119,3 +153,5 @@ $footer-logo-width: auto !default;
 .footer-brand {
   text-decoration: none !important;
 }
+
+
