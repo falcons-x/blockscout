@@ -23,7 +23,9 @@ config :block_scout_web, BlockScoutWeb.Chain,
   logo_footer: System.get_env("LOGO_FOOTER"),
   logo_text: System.get_env("LOGO_TEXT"),
   has_emission_funds: false,
-  show_maintenance_alert: System.get_env("SHOW_MAINTENANCE_ALERT", "false") == "true"
+  show_maintenance_alert: System.get_env("SHOW_MAINTENANCE_ALERT", "false") == "true",
+  enable_testnet_label: System.get_env("SHOW_TESTNET_LABEL", "false") == "true",
+  testnet_label_text: System.get_env("TESTNET_LABEL_TEXT", "Testnet")
   fx_explorer_url: System.get_env("FX_EXPLORER_URL", "https://explorer.functionx.io")
 
 config :block_scout_web,
