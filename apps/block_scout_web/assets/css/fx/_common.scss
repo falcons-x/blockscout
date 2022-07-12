@@ -1,0 +1,178 @@
+@import "variable";
+@import "font";
+@import "icon";
+.fx{
+
+  * {
+    -webkit-tap-highlight-color:transparent;
+  }
+
+  body {
+    color: $fx-lighten-text-color;
+  }
+
+  .container {
+    width: 1200px;
+    margin: 0 auto;
+  }
+
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  strong,
+  span {
+    margin: 0;
+    color: inherit;
+  }
+
+  h2 {
+    font-size: 48px;
+    line-height: 1.5em;
+  }
+
+
+  h3 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  h4 {
+    font-size: 24px;
+    line-height: 1.5em;
+  }
+
+  h5 {
+    font-size: 20px;
+    line-height: 1.8em;
+  }
+
+  h6 {
+    font-size: 16px;
+    line-height: 1.75em;
+  }
+
+  h1,h2,h3,h4,h5,h6  {
+    span {
+      font-family: inherit;
+    }
+  }
+
+  p,
+  strong {
+    font-size: 14px;
+    line-height: 1.5em;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  strong {
+    @extend .font-bold;
+  }
+
+  p,
+  a,
+  span {
+    @extend .font-condensed;
+  }
+
+  ul,
+  li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  a, .a-link {
+    color: $fx-lighten-main-color;
+    text-decoration: none;
+    transition: color $fx-transition-all-time ease;
+
+    @include checkHover {
+      &:hover {
+        color: $fx-lighten-link-hover-color !important;
+      }
+    }
+
+    &.router-link-exact-active,
+    &.active {
+      color: $fx-lighten-link-hover-color !important;
+    }
+
+    &.more {
+      border-radius: 10px;
+      border: none;
+      background-color: $fx-lighten-section-distinguish-color;
+      padding: 6px 18px;
+      cursor: pointer;
+
+      .icon-arrow {
+        margin-left: .5em;
+      }
+    }
+  }
+
+  section {
+    padding: $fx-section-padding;
+    box-sizing: border-box;
+    position: relative;
+
+    &:not(:last-child) {
+      margin-bottom: 128px;
+    }
+  }
+
+  label,
+  .label {
+    &.m-bottom {
+      margin-bottom: 12px;
+    }
+
+    &.flex .title-text ~ * {
+      margin-left: .5em;
+    }
+  }
+
+  .title-text {
+    color: $fx-lighten-title-text-color;
+  }
+
+  .flex {
+    display: flex;
+  }
+
+  .flex-align-center {
+    @extend .flex;
+    align-items: center;
+  }
+
+  .flex-center {
+    @extend .flex-align-center;
+    justify-content: center;
+  }
+
+  .flex-space-between {
+    @extend .flex-align-center;
+    justify-content: space-between;
+  }
+
+  .flex-start-space-between {
+    @extend .flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .flex-direction-column {
+    @extend .flex;
+    flex-direction: column;
+  }
+}
+

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>返回@2x</title>
+    <g id="统计图表" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Web_每日交易数量详情2" transform="translate(-1069.000000, -261.000000)" fill-rule="nonzero">
+            <g id="Legend" transform="translate(152.000000, 228.000000)">
+                <g id="返回" transform="translate(917.000000, 33.000000)">
+                    <rect id="Rectangle" fill="#000000" opacity="0" x="0" y="0" width="24" height="24"></rect>
+                    <path d="M18.495,18.17225 C18.495,18.17225 18.363,18.512 18.1875,18.17225 C18.1875,18.17225 16.22325,12.245 11.436,13.7375 L11.436,15.57725 C11.436,15.57725 11.3595,16.65875 10.416,15.9545 L5.709,11.891 C5.709,11.891 4.71075,11.348 5.76975,10.60475 L10.527,6.51725 C10.527,6.51725 11.2425,6.00725 11.41425,6.8435 L11.4195,8.82875 C11.4195,8.83025 20.34225,9.25775 18.495,18.17225 L18.495,18.17225 Z" id="Path" fill="#080A32"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

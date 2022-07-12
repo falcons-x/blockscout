@@ -1,5 +1,28 @@
 <% staking_enabled_in_menu = Application.get_env(:block_scout_web, BlockScoutWeb.Chain)[:staking_enabled_in_menu] %>
 <% apps_menu = Application.get_env(:block_scout_web, :apps_menu) %>
+<nav class="fx-navbar fx">
+    <div class="container">
+        <div class="logo flex">
+            <a href="https://explorer.functionx.io/">
+                <img alt="Function X Explorer" srcset="" src="/images/web_home_nav_icon_logo.svg"/>
+            </a>
+            <div class="layout-search-common">
+                <a class="back-link" href="https://functionx.io" target="_blank" rel="noopener noreferrer">
+                    <i class="icon icon-back"></i>
+                    <strong>Back to Function X</strong>
+                </a>
+            </div>
+        </div>
+        <nav class="phone-not-show flex-center display-block">
+            <a href="https://explorer.functionx.io/" target="_blank" rel="noopener noreferrer" ><i class="icon icon-head-home"></i><strong>Home</strong></a>
+            <a href="https://explorer.functionx.io/fxcore/blocks" target="_blank" rel="noopener noreferrer" ><i class="icon icon-head-blocks"></i><strong>Blocks</strong></a>
+            <a href="https://explorer.functionx.io/fxcore/txs" target="_blank" rel="noopener noreferrer" ><i class="icon icon-head-transactions"></i><strong>Transactions</strong></a>
+            <a href="https://explorer.functionx.io/fxcore/validators" target="_blank" rel="noopener noreferrer" ><i class="icon icon-head-validator"></i><strong>Validator</strong></a>
+            <a href="https://explorer.functionx.io/fxcore/datas" target="_blank" rel="noopener noreferrer" ><i class="icon icon-head-data"></i><strong>Data</strong></a>
+            <a href="https://explorer.functionx.io/fxcore/proposals" target="_blank" rel="noopener noreferrer" ><i class="icon icon-head-data"></i><strong>Proposals</strong></a>
+        </nav>
+    </div>
+</nav>
 <nav class="navbar navbar-dark navbar-expand-lg navbar-primary" data-selector="navbar" id="top-navbar">
   <div class="container-fluid navbar-container">
     <%= link to: webapp_url(@conn), class: "navbar-brand", "data-test": "header_logo" do %>
@@ -68,7 +91,7 @@
                 </span>
                 <%= gettext("Tokens") %>
               </a>
-              <div class="dropdown-menu" aria-labeledby="navbarTransactionsDropdown"> 
+              <div class="dropdown-menu" aria-labeledby="navbarTransactionsDropdown">
                 <%= link(
                       gettext("All"),
                       class: "dropdown-item #{tab_status("tokens", @conn.request_path)}",
@@ -100,7 +123,7 @@
                 </span>
                 <%= gettext("Tokens") %>
               </a>
-              <div class="dropdown-menu" aria-labeledby="navbarTransactionsDropdown"> 
+              <div class="dropdown-menu" aria-labeledby="navbarTransactionsDropdown">
                 <%= link(
                       gettext("All"),
                       class: "dropdown-item #{tab_status("tokens", @conn.request_path)}",
@@ -123,7 +146,7 @@
               </span>
               <%= gettext("APIs") %>
             </a>
-            <div class="dropdown-menu" aria-labeledby="navbarTransactionsDropdown"> 
+            <div class="dropdown-menu" aria-labeledby="navbarTransactionsDropdown">
               <%= link(
                     gettext("GraphQL"),
                     class: "dropdown-item #{tab_status("graphiql", @conn.request_path)}",
@@ -162,7 +185,7 @@
                 </a>
               <% end %>
               <%= if apps_menu == true do %>
-                <%= for %{url: url, title: title} <- external_apps_list() do %> 
+                <%= for %{url: url, title: title} <- external_apps_list() do %>
                     <a href="<%= url %>" class="dropdown-item" target="_blank"><%= title %>
                       <span class="external-link-icon">
                         <%= render BlockScoutWeb.IconsView, "_external_link.html" %>
@@ -180,19 +203,19 @@
             </span>
             <%= subnetwork_title() %>
           </a>
-          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">  
-            <a class="dropdown-item header division">Mainnets</a> 
-            <%= for %{url: url, title: title} <- dropdown_head_main_nets() do %>  
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item header division">Mainnets</a>
+            <%= for %{url: url, title: title} <- dropdown_head_main_nets() do %>
               <a class="dropdown-item" href="<%= url %>"><%= title %></a>
-            <% end %> 
-            <a class="dropdown-item header division">Testnets</a> 
-            <%= for %{url: url, title: title} <- test_nets(dropdown_nets()) do %> 
+            <% end %>
+            <a class="dropdown-item header division">Testnets</a>
+            <%= for %{url: url, title: title} <- test_nets(dropdown_nets()) do %>
               <a class="dropdown-item" href="<%= url %>"><%= title %></a>
-            <% end %> 
-            <a class="dropdown-item header division">Other Networks</a> 
-            <%= for %{url: url, title: title} <- dropdown_other_nets() do %>  
+            <% end %>
+            <a class="dropdown-item header division">Other Networks</a>
+            <%= for %{url: url, title: title} <- dropdown_other_nets() do %>
               <a class="dropdown-item" href="<%= url %>"><%= title %></a>
-            <% end %> 
+            <% end %>
           </div>
         </li>
       </ul>

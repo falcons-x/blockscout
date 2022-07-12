@@ -4,31 +4,35 @@ $secondary: #1bb3dc;
 $tertiary: #94c03a;
 $additional-font: #00ffff;
 
+$fx-main: #080A32;
+$fx-main-sec: rgba($fx-main, 0.5);
+
 // footer
-$footer-background-color: #080A32;
-$footer-title-color: #fff;
-$footer-text-color: #ffffff;
-$footer-item-disc-color: $secondary;
-.footer-logo { filter: brightness(0) invert(1); }
+$footer-background-color: #ffffff;
+$footer-title-color: $fx-main;
+$footer-text-color: $fx-main-sec;
+$footer-item-disc-color: #0552DC;
+//.footer-logo { filter: brightness(0) invert(1); }
 
 // dashboard
-$dashboard-line-color-price: $tertiary; // price left border
+$dashboard-line-color-price: #71A800; // price left border
+$dashboard-line-color-market: #0552DC;
+$dashboard-line-color-transactions: #671BDC;
 
-$dashboard-banner-chart-legend-label-color: #dcc8ff;
+$dashboard-banner-chart-legend-label-color: $fx-main-sec;
 $dashboard-stats-item-label-color: $dashboard-banner-chart-legend-label-color;
-$dashboard-banner-chart-legend-value-color: #fff; // chart labels
-$dashboard-stats-item-value-color: #ff0000; // stat values
+$dashboard-banner-chart-legend-value-color: $fx-main; // chart labels
+$dashboard-stats-item-value-color: $fx-main; // stat values
 
-$dashboard-banner-chart-legend-value-color: #ff00ff;
-$dashboard-banner-chart-axis-font-color: #00ff00;
+$dashboard-banner-chart-axis-font-color: $fx-main; // chart text
 
-$dashboard-stats-item-border-color: $secondary; // stat border
+$dashboard-stats-item-border-color: #0552DC; // stat border
 
-$dashboard-banner-gradient-start: $primary; // gradient begin
+$dashboard-banner-gradient-start: #f0f0f0; // gradient begin
 
-$dashboard-banner-gradient-end: lighten($primary, 5); // gradient end
+$dashboard-banner-gradient-end: #fdfdfd; // gradient end
 
-$dashboard-banner-network-plain-container-background-color: #8258cd; // stats bg
+$dashboard-banner-network-plain-container-background-color: #fafafa; // stats bg
 
 
 // navigation
@@ -62,7 +66,18 @@ $card-tab-active: $primary;
 	    $dashboard-banner-gradient-start,
 	    $dashboard-banner-gradient-end
 	  );
+		box-shadow: none;
+
 	}
+	main {
+		background-color: #ffffff !important;
+	}
+	.dashboard-banner-network-plain-container{
+		&::after{
+			box-shadow: 0 0 35px 0 rgba(0, 0, 0, 0.08);
+		}
+	}
+
 }
 
 // Badges
@@ -75,6 +90,11 @@ $api-text-monospace-color: $primary;
   .dropdown-items .dropdown-item:hover {
     color: $primary !important;
   }
+}
+
+// card
+.card{
+	box-shadow: 0 8px 20px 0 rgba(8, 10, 50 , 0.08) !important;
 }
 
 // Dark theme

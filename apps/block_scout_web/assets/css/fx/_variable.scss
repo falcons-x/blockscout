@@ -1,0 +1,32 @@
+/* Color */
+@function colorRgba($color, $alpha) {
+  @return rgba($color: $color, $alpha: $alpha);
+}
+
+
+
+$fx-header-footer-height: 60px;
+// 整体主要颜色
+$fx-lighten-main-color: #080a32;
+// 模块区分
+$fx-lighten-section-distinguish-color: #fbfbfb;
+// 链接hover状态
+$fx-lighten-link-hover-color: #0552DC;
+// 标题正文
+$fx-lighten-title-text-color: colorRgba($fx-lighten-main-color, 0.5);
+// 文字
+$fx-lighten-text-color: colorRgba($fx-lighten-main-color, 1.0);
+
+/* Spacing */
+// 所有section的padding
+$fx-section-padding: 32px;
+
+/* Animation */
+// 动画延迟时长
+$fx-transition-all-time: .3s;
+
+@mixin checkHover() {
+  @media (any-hover: hover){
+    @content;
+  }
+}
