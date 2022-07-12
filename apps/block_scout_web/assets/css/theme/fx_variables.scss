@@ -59,6 +59,8 @@ a.tile-title { color: $primary !important; }
 $card-background-1: $primary;
 $card-tab-active: $primary;
 
+body{
+
 .layout-container {
 	.dashboard-banner-container {
 	  background-image: linear-gradient(
@@ -70,7 +72,7 @@ $card-tab-active: $primary;
 
 	}
 	main {
-		background-color: #ffffff !important;
+		background-color: #ffffff ;
 	}
 	.dashboard-banner-network-plain-container{
 		&::after{
@@ -78,6 +80,7 @@ $card-tab-active: $primary;
 		}
 	}
 
+}
 }
 
 // Badges
@@ -101,3 +104,39 @@ $api-text-monospace-color: $primary;
 $dark-primary: #3D84FE;
 $dark-secondary: #1BB3DC;
 $dark-primary-alternate: #0552DC;
+
+$dark-fx-main: #ffffff;
+$dark-fx-main-sec: rgba($dark-fx-main, 0.5);
+$dark-fx-main-trd: rgba($dark-fx-main, 0.1);
+$dark-fx-point: #1a69f6;
+$dark-fx-bg: #1a1e29;
+$dark-fx-bg-light: #232733;
+
+$labels-dark: $dark-fx-main-sec;
+$dark-light-bg: $dark-fx-bg-light;
+$body-dark: $dark-fx-bg;
+$dark-bg: $dark-fx-bg;
+$dark-light: $dark-fx-bg-light;
+
+
+// dashboard
+$dashboard-banner-chart-axis-font-color-dark-theme: $dark-fx-main;
+
+$dashboard-banner-chart-legend-value-color-dark-theme: $dark-fx-main;
+$dashboard-stats-item-value-color-dark-theme:  $dark-fx-main;
+
+$dashboard-line-color-price-dark-theme: $dashboard-line-color-price;
+$dashboard-line-color-market-dark-theme: $dashboard-line-color-market;
+$dashboard-line-color-transactions-dark-theme: $dashboard-line-color-transactions;
+
+$dashboard-stats-item-border-color-dark-theme: $dark-fx-point;
+
+// main
+$tile-bottom-contents-color-dark-theme: #2e3341;
+$tile-border-color-dark-theme: $dark-fx-main-trd;
+
+// foot
+$footer-title-color-dark-theme: $dark-fx-main;
+$footer-background-color-dark-theme: $dark-fx-bg;
+$footer-text-color-dark-theme: $dark-fx-main-sec;
+$footer-item-disc-color-dark-theme: $dark-fx-point;

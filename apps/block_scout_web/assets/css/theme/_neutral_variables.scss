@@ -1,13 +1,13 @@
 // general
-$primary: #0552DC;
-$secondary: #1bb3dc;
-$tertiary: #94c03a;
-$additional-font: #00ffff;
+$primary: #5c34a2;
+$secondary: #87e1a9;
+$tertiary: #bf9cff;
+$additional-font: #fff;
 
 // footer
-$footer-background-color: #080A32;
+$footer-background-color: #3c226a;
 $footer-title-color: #fff;
-$footer-text-color: #ffffff;
+$footer-text-color: #bda6e7;
 $footer-item-disc-color: $secondary;
 .footer-logo { filter: brightness(0) invert(1); }
 
@@ -17,10 +17,7 @@ $dashboard-line-color-price: $tertiary; // price left border
 $dashboard-banner-chart-legend-label-color: #dcc8ff;
 $dashboard-stats-item-label-color: $dashboard-banner-chart-legend-label-color;
 $dashboard-banner-chart-legend-value-color: #fff; // chart labels
-$dashboard-stats-item-value-color: #ff0000; // stat values
-
-$dashboard-banner-chart-legend-value-color: #ff00ff;
-$dashboard-banner-chart-axis-font-color: #00ff00;
+$dashboard-stats-item-value-color: #fff; // stat values
 
 $dashboard-stats-item-border-color: $secondary; // stat border
 
@@ -57,11 +54,11 @@ $card-tab-active: $primary;
 
 .layout-container {
 	.dashboard-banner-container {
-	  background-image: linear-gradient(
-	    to bottom,
-	    $dashboard-banner-gradient-start,
-	    $dashboard-banner-gradient-end
-	  );
+		background-image: linear-gradient(
+										to bottom,
+										$dashboard-banner-gradient-start,
+										$dashboard-banner-gradient-end
+		);
 	}
 }
 
@@ -72,12 +69,12 @@ $api-text-monospace-color: $primary;
 
 // Tokens dropdown
 .token-balance-dropdown[aria-labelledby="dropdown-tokens"] {
-  .dropdown-items .dropdown-item:hover {
-    color: $primary !important;
-  }
+	.dropdown-items .dropdown-item:hover {
+		color: $primary !important;
+	}
 }
 
 // Dark theme
-$dark-primary: #3D84FE;
-$dark-secondary: #1BB3DC;
-$dark-primary-alternate: #0552DC;
+$dark-primary: #9b62ff;
+$dark-secondary: #87e1a9;
+$dark-primary-alternate: #7e50d0;

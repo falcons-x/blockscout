@@ -91,33 +91,36 @@
     list-style: none;
   }
 
-  a, .a-link {
-    color: $fx-lighten-main-color;
-    text-decoration: none;
-    transition: color $fx-transition-all-time ease;
+  &.fx-navbar, &.fx-footer{
+    a, .a-link {
+      color: $fx-lighten-main-color;
+      text-decoration: none;
+      transition: color $fx-transition-all-time ease;
 
-    @include checkHover {
-      &:hover {
+      @include checkHover {
+        &:hover {
+          color: $fx-lighten-link-hover-color !important;
+        }
+      }
+
+      &.router-link-exact-active,
+      &.active {
         color: $fx-lighten-link-hover-color !important;
       }
-    }
 
-    &.router-link-exact-active,
-    &.active {
-      color: $fx-lighten-link-hover-color !important;
-    }
+      &.more {
+        border-radius: 10px;
+        border: none;
+        background-color: $fx-lighten-section-distinguish-color;
+        padding: 6px 18px;
+        cursor: pointer;
 
-    &.more {
-      border-radius: 10px;
-      border: none;
-      background-color: $fx-lighten-section-distinguish-color;
-      padding: 6px 18px;
-      cursor: pointer;
-
-      .icon-arrow {
-        margin-left: .5em;
+        .icon-arrow {
+          margin-left: .5em;
+        }
       }
     }
+
   }
 
   section {
