@@ -53,7 +53,7 @@ $btn-address-card-icon-color: $primary; // btn address color
 $tile-body-a-color: $primary;
 $tile-type-block-color: $primary;
 $tile-type-progress-bar-color: $primary;
-a.tile-title { color: $primary !important; }
+//a.tile-title { color: $primary !important; }
 
 // card
 $card-background-1: $primary;
@@ -96,9 +96,9 @@ $api-text-monospace-color: $primary;
 }
 
 // card
-.card{
-	box-shadow: 0 8px 20px 0 rgba(8, 10, 50 , 0.08) !important;
-}
+//.card{
+//	box-shadow: 0 8px 20px 0 rgba(8, 10, 50 , 0.08) !important;
+//}
 
 // Dark theme
 $dark-primary: #3D84FE;

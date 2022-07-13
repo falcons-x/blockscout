@@ -117,3 +117,126 @@
     </div>
   </div>
 </footer>
+<style>
+  :root{
+    --fx-main-color: #080a32;
+    --fx-sec-color: rgba(8,10,50,.5);
+    --fx-link-color: #0552dc;
+  }
+  .card{
+    border-radius: 36px;
+    box-shadow: 0 0 30px 0 rgba(202,199,226,0);
+    font-family: "cmr_regular","Helvetica Neue","PingFang SC","Microsoft YaHei","Simsun",Helvetica,Arial,Verdana,sans-serif;
+  }
+  .card.card-chain-blocks{
+    background-color: #fbfbfb;
+  }
+  .card-body{
+    padding: 32px;
+  }
+  .card-title{
+    font-size: 48px;
+    line-height: 1.5em;
+    font-family: "cmr_medium","Helvetica Neue","PingFang SC","Microsoft YaHei","Simsun",Helvetica,Arial,Verdana,sans-serif;
+  }
+  .btn-line{
+    border-color: transparent;
+    background-color: transparent;
+    font-family: "cmr_medium","Helvetica Neue","PingFang SC","Microsoft YaHei","Simsun",Helvetica,Arial,Verdana,sans-serif;
+    color: var(--fx-main-color);
+    font-size: 14px;
+    line-height: 1.5em;
+  }
+  .btn-line:hover{
+    background-color: transparent;
+    color: var(--fx-link-color);
+    text-decoration: none;
+  }
+  .btn-line:after{
+    content: '';
+    background-image: url('../fonts/arrow.svg');
+    display: inline-block;
+    width: 11px;
+    height: 7px;
+    vertical-align: middle;
+    margin-left: .5em;
+  }
+  .tile.tile-type-block{
+    border-radius: 16px;
+    transition: box-shadow 0.8s;
+    border: 1px solid rgba(8,10,50,.06);
+    text-align: center;
+  }
+  .tile.tile-type-block:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity .3s ease;
+    background-image: linear-gradient(180deg,#ecf2fd,#fff);
+  }
+  .tile.tile-type-block:hover{
+    box-shadow: 0 8px 20px 0 rgba(8,10,50,.06);
+  }
+  .tile.tile-type-block:hover:before{
+    opacity: 1;
+  }
+
+
+  .tile{
+    padding: 32px;
+  }
+  .tile.tile-type-block .tile-title{
+    transition: color .3s ease;
+    color: var(--fx-main-color);
+    font-size: 24px;
+    line-height: 24px;
+    text-decoration: none;
+  }
+  .tile.tile-type-block .tile-title:hover{
+    color: var(--fx-link-color);
+  }
+  .tile-bottom-contents{
+    background-color: transparent;
+  }
+  .tile-transactions{
+    text-align: center;
+  }
+
+  .tile .tile-body{
+    font-size: 14px;
+    line-height: 1.5em;
+  }
+  .row.tile-body>.d-flex.flex-column>span:not(:nth-last-of-type(1)){
+    margin-bottom: 12px;
+  }
+  .tile .tile-body a, .tile a[data-test=token_link], .tile span[data-address-hash]{
+    color: var(--fx-main-color);
+  }
+  .tile .tile-body a{
+    font-size: 14px;
+    line-height: 1.5em;
+  }
+  .tile .tile-body a:hover, .tile a[data-test=token_link]:hover, .tile a:hover span[data-address-hash]{
+    color: var(--fx-link-color);
+  }
+
+  .tile .tile-title{
+    color: var(--fx-main-color);
+    font-size: 14px;
+    line-height: 1.5em;
+  }
+  .tile .text-nowrap{
+    color: rgba(8,10,50,.5);
+  }
+  .tile .tile-bottom a{
+    font-size: 16px;
+    line-height: 28px;
+    font-family: "cmr_medium","Helvetica Neue","PingFang SC","Microsoft YaHei","Simsun",Helvetica,Arial,Verdana,sans-serif;
+  }
+
+</style>

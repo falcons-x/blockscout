@@ -16,10 +16,28 @@ $tile-status-awaiting-internal-transactions: $warning !default;
 $tile-padding: 1rem;
 $tile-title-color: #333 !default;
 $tile-body-a-color: #5959d8 !default;
+$fx-tile-body-bg: #fbfbfb;
+$fx-tile-body-border: #e6e6ea;
+$fx-tile-body-left-line-color: #f6f6f6;
 
-@mixin generate-tile-block($prefix, $color, $label-color: false) {
+@mixin generate-tile-block($prefix, $color, $label-color: false, $line-color: $fx-tile-body-left-line-color) {
   &#{ $prefix } {
-    border-left: 4px solid $color;
+    position: relative;
+    border: 1px solid $fx-tile-body-border;
+    border-radius: 16px;
+    overflow: hidden;
+
+    &:before{
+      content:'';
+      position: absolute;
+      top: 32px;
+      bottom: 32px;
+      left: 0;
+      box-sizing: border-box;
+      width: 8px;
+      background-color: $line-color;
+      z-index: 1;
+    }
 
     .tile-transaction-type-block {
       a {
@@ -32,6 +50,9 @@ $tile-body-a-color: #5959d8 !default;
     }
 
     .tile-label {
+      font-size: 20px;
+      line-height: 24px;
+      @include font-select('cmr_medium');
       @if ($label-color) {
         color: $label-color;
       } @else {
@@ -41,14 +62,14 @@ $tile-body-a-color: #5959d8 !default;
 
     .tile-status-label {
       color: inherit;
+      font-size: 14px;
+      line-height: 1.5em;
+      @include font-select('cmr_medium');
     }
 
     .tile-transaction-type-block {
-      background-color: rgba($color, 0.1);
-      border-bottom: 1px solid $color;
-      border-right: 1px solid $color;
-      border-top: 1px solid $color;
       color: $color;
+      background-color: $fx-tile-body-bg;
     }
   }
 }
@@ -73,10 +94,10 @@ $tile-body-a-color: #5959d8 !default;
 
 .tile-transaction-type-block {
   align-items: center;
-  bottom: -17px;
+  bottom: -33px;
   justify-content: center;
-  margin-left: -1px;
-  margin-top: -34px;
+  margin-left: -17px;
+  margin-top: -66px;
   padding: 0 5px;
   position: relative;
 
@@ -229,6 +250,8 @@ $tile-body-a-color: #5959d8 !default;
   );
   @include generate-tile-block(
     ".tile-type-transaction",
+    $tile-type-transaction-color,
+    false,
     $tile-type-transaction-color
   );
   @include generate-tile-block(
@@ -241,6 +264,8 @@ $tile-body-a-color: #5959d8 !default;
   );
   @include generate-tile-block(
     ".tile-type-token-transfer",
+    $tile-type-token-transfer-color,
+    false,
     $tile-type-token-transfer-color
   );
   @include generate-tile-block(
