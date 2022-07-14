@@ -26,6 +26,10 @@
             <a href="https://explorer.functionx.io/fxcore/validators" target="_blank" rel="noopener noreferrer" ><i class="icon icon-head-validator"></i><strong>Validator</strong></a>
             <a href="https://explorer.functionx.io/fxcore/datas" target="_blank" rel="noopener noreferrer" ><i class="icon icon-head-data"></i><strong>Data</strong></a>
             <a href="https://explorer.functionx.io/fxcore/proposals" target="_blank" rel="noopener noreferrer" ><i class="icon icon-head-data"></i><strong>Proposals</strong></a>
+            <a class="back-link" href="https://functionx.io" target="_blank" rel="noopener noreferrer">
+                <i class="icon icon-back"></i>
+                <strong>Back to Function X</strong>
+            </a>
         </nav>
     </div>
 </nav>
@@ -276,9 +280,13 @@
     .card-body{
         padding: 32px;
     }
-    .card-title{
+    .card-chain-transactions .card-title,.card-chain-blocks .card-title{
         font-size: 48px;
         line-height: 1.5em;
+    }
+    .card-title{
+        font-size: 28px;
+        line-height: 36px;
         font-family: "cmr_medium","Helvetica Neue","PingFang SC","Microsoft YaHei","Simsun",Helvetica,Arial,Verdana,sans-serif;
     }
     .btn-line{
@@ -381,28 +389,27 @@
         font-family: "cmr_medium","Helvetica Neue","PingFang SC","Microsoft YaHei","Simsun",Helvetica,Arial,Verdana,sans-serif;
     }
 
-    section[data-page=transaction-details] .card .card-title,.card-title.list-title-description{
-        font-size: 28px;
-        line-height: 36px;
-    }
-    section[data-page=transaction-details] .card .card-body{
+    section[data-page=transaction-details] .card .card-body,.fx-address-details.card .card-body{
         transform: translate(0, 0);
         position: relative;
     }
-    section[data-page=transaction-details] .card .card-body:before{
+    section[data-page=transaction-details] .card .card-body:before,.fx-address-details.card .card-body:before{
         content: '';
         position: absolute;
         z-index: -1;
         background-color: var(--fx-body-bg);
-        top: 108px;
+        top: 80px;
         left: 0;
         right: 0;
         bottom: 0;
         border-radius: 18px;
     }
-    section[data-page=transaction-details] .card .row{
-        margin-top: 32px;
-        margin-bottom: 0;
+    .fx-address-details.card .card-body:before{
+        top: 110px;
+    }
+    section[data-page=transaction-details] .card .row:not(:nth-last-of-type(1)){
+        margin-bottom: 32px;
+        margin-top: 0;
     }
     section[data-page=transaction-details] .card .row .text-muted{
         color: var(--fx-sec-color)!important;
@@ -417,9 +424,9 @@
     section[data-page=transaction-details] .card .row span[data-transaction-status],section[data-page=transaction-details] .card .row span[data-transaction-status] i:before{
         color: var(--fx-main-color);
     }
-    section[data-page=transaction-details] .card .row .large{
-        background-color: #f8f9fa;
-        color: var(--fx-sec-color);
+    .card .row .bs-label{
+        background-color: #f8f9fa !important;
+        color: var(--fx-sec-color) !important;
     }
     .card code{
         color: var(--fx-sec-color);
@@ -428,8 +435,12 @@
         fill: var(--fx-main-color)
     }
 
+    .card-tabs{
+        border-bottom-width: 0;
+    }
     .card-tab{
         color: var(--fx-sec-color);
+        border-radius: 1000px;
     }
     .card-tab.active{
         background-color: var(--fx-line-color);
@@ -457,19 +468,29 @@
     .fx-navbar.show .icon-app-nav-close{
         display: block;
     }
-    .fx-navbar.show .fixed-filter{
-        display: block;
-    }
+
     .icon-app-nav-menu,.icon-app-nav-close{
         cursor: pointer;
     }
+    .fx-navbar nav .back-link{
+        display: none;
+    }
 
-    @media screen and (max-width: 1199px) {
+    @media screen and (max-width: 1230px) {
+        .fx-navbar.show .fixed-filter{
+            display: block;
+        }
         .fx-navbar nav{
             display: none;
         }
         .fx-navbar.show nav{
             display: block;
+        }
+        .fx-navbar nav .back-link{
+            display: block;
+        }
+        .fx-navbar nav .icon-back{
+            vertical-align: middle;
         }
     }
 

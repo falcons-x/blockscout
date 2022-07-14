@@ -28,7 +28,7 @@ $fx-transition-all-time: .3s;
 
 // 适配
 // 手机
-$media-phone-size: 1199px;
+$media-phone-size: 1230px;
 @mixin mediaPhone() {
   @media screen and (max-width: $media-phone-size) {
     @content;
@@ -36,7 +36,7 @@ $media-phone-size: 1199px;
 }
 
 @mixin mediaPC {
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1231px) {
     @content;
   }
 }

@@ -51,6 +51,7 @@ $fx-tile-body-left-line-color: #f6f6f6;
 
     .tile-label {
       font-size: 20px;
+      font-weight: initial;
       line-height: 24px;
       @include font-select('cmr_medium');
       @if ($label-color) {
