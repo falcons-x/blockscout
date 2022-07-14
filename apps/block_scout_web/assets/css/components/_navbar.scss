@@ -83,6 +83,10 @@ $navbar-logo-width: auto !default;
     width: 100%;
     margin-left: 33px;
   }
+
+  @include mediaPhone {
+
+  }
 }
 
 .navbar.navbar-primary {

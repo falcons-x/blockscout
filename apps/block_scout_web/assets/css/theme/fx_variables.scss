@@ -44,10 +44,12 @@ $header-icon-border-color-hover: $primary;
 
 // buttons
 $btn-line-bg: #fff; // button bg
-$btn-line-color: $primary; // button border and font color && hover bg color
-$btn-copy-color: $primary; // btn copy
+$btn-line-color: #f6f6f6; // button border and font color && hover bg color
+$btn-copy-color: $fx-main; // btn copy
 $btn-qr-color: $primary; // btn qr-code
 $btn-address-card-icon-color: $primary; // btn address color
+$fx-tooltip-background-color: #f6f6f6;
+$fx-tooltip-color: $fx-main;
 
 //links & tile
 $tile-body-a-color: $primary;

@@ -25,6 +25,22 @@ $fx-section-padding: 32px;
 // 动画延迟时长
 $fx-transition-all-time: .3s;
 
+
+// 适配
+// 手机
+$media-phone-size: 1199px;
+@mixin mediaPhone() {
+  @media screen and (max-width: $media-phone-size) {
+    @content;
+  }
+}
+
+@mixin mediaPC {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}
+
 @mixin checkHover() {
   @media (any-hover: hover){
     @content;
