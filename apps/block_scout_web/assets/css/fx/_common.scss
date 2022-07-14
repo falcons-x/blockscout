@@ -11,7 +11,7 @@
     color: $fx-lighten-text-color;
   }
 
-  .container {
+  .fx-container {
     width: 1230px;
     margin: 0 auto;
   }
@@ -179,3 +179,80 @@
   }
 }
 
+
+@include mediaPhone {
+  .fx{
+    .detail-other .vjs-value__string {
+      word-break: break-all;
+    }
+    .app-not-show {
+      display: none !important;
+    }
+    .app-not-show-flex {
+      display: none !important;
+    }
+    .app-show {
+      display: block !important;
+    }
+
+    .app-show-flex {
+      display: flex !important;
+    }
+
+    .fx-container {
+      width: 100%;
+    }
+
+    h2 {
+      font-size: 26px;
+    }
+
+    h3 {
+      font-size: 22px;
+      line-height: 1em;
+    }
+
+    h4 {
+      font-size: 18px;
+    }
+
+    a {
+      &.more {
+        // padding: 6px 16px;
+        padding: 0;
+      }
+    }
+
+    .not-show {
+      display: none;
+    }
+
+    .phone-not-show {
+      display: none;
+    }
+
+    section {
+      // padding: 16px;
+      &:not(:last-child){
+
+        // margin-bottom: 16px;
+        margin-bottom: 0px;
+      }
+    }
+
+    .validator, .blocks, .transactions{
+      .chain-tab .tab-common, .blocks {
+        label{
+          min-width: 98px;
+        }
+        .slider  {
+          width: 98px;
+        }
+      }
+    }
+
+    .only-phone-not-show {
+      display: none;
+    }
+  }
+}

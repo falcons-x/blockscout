@@ -21,7 +21,7 @@ $navbar-logo-width: auto !default;
   box-shadow: 0 1px 0 0 rgb(8 10 50 / 8%), 0 -1px 0 0 rgb(8 10 50 / 8%);
   flex-shrink: 0;
   background-color: #FFF;
-  .container {
+  .fx-container {
     height: 100%;
     display: flex;
     align-items: center;
@@ -83,9 +83,96 @@ $navbar-logo-width: auto !default;
     width: 100%;
     margin-left: 33px;
   }
+  .app-nav{
+    display: none;
+  }
+}
 
-  @include mediaPhone {
+@include mediaPhone {
+  .fx-navbar {
+    height: 50px;
+    background-color: initial;
+    backdrop-filter: initial;
+    .fx-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+    .logo {
+      flex-shrink: 0;
+      height: 50px;
+      width: 100%;
+      padding-left: 16px;
+      padding-right: 19px;
+      box-sizing: border-box;
+      justify-content: space-between;
+      align-items: center;
+      background-color: rgba(255, 255, 255, 0.8);
+      backdrop-filter: saturate(180%) blur(20px);
+      // box-shadow: 0 1px 0 0 rgb(0 0 0 / 8%), 0 -1px 0 0 rgb(0 0 0 / 8%);
+      img {
+        width: 100px;
+      }
+    }
 
+    .layout-search-common {
+      display: none;
+      margin-left: 0px;
+      margin-right: 17px;
+    }
+
+    .fixed-filter {
+      position: fixed;
+      height: 100vh;
+      top: 50px;
+      right: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.8);
+      backdrop-filter: saturate(180%) blur(20px);
+    }
+
+    nav {
+      padding: 10px 16px;
+      flex-direction: column;
+      justify-content: flex-start;
+      box-sizing: border-box;
+      line-height: 36px;
+      z-index: 100;
+      a {
+        width: 100%;
+        color: #080a32;
+        margin-left: 0;
+        padding-top: 30px;
+
+        .icon {
+          width: 24px;
+          height: 24px;
+          margin-right: 16px;
+        }
+
+        &:not(.back-link) {
+
+          strong {
+            // margin-left: 40px;
+            font-size: 26px;
+          }
+        }
+
+        &.router-link-exact-active {
+          padding-left: 0px;
+          strong {
+            margin-left: 0px;
+          }
+        }
+      }
+    }
+    .display-block {
+      display: block;
+    }
+    .app-nav {
+      display: block;
+    }
   }
 }
 

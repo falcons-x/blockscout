@@ -2,7 +2,8 @@
 <% apps_menu = Application.get_env(:block_scout_web, :apps_menu) %>
 <%= if true do %>
 <nav class="fx-navbar fx">
-    <div class="container">
+    <div class="fx-container">
+        <div class="fixed-filter"></div>
         <div class="logo flex">
             <a href="https://explorer.functionx.io/">
                 <img alt="Function X Explorer" srcset="" src="/images/web_home_nav_icon_logo.svg"/>
@@ -13,8 +14,12 @@
                     <strong>Back to Function X</strong>
                 </a>
             </div>
+            <div class="app-nav">
+                <i class="icon icon-app-nav-menu"></i>
+                <i class="icon icon-app-nav-close"></i>
+            </div>
         </div>
-        <nav class="phone-not-show flex-center display-block">
+        <nav class="phone-not-show flex-center">
             <a href="https://explorer.functionx.io/" target="_blank" rel="noopener noreferrer" ><i class="icon icon-head-home"></i><strong>Home</strong></a>
             <a href="https://explorer.functionx.io/fxcore/blocks" target="_blank" rel="noopener noreferrer" ><i class="icon icon-head-blocks"></i><strong>Blocks</strong></a>
             <a href="https://explorer.functionx.io/fxcore/txs" target="_blank" rel="noopener noreferrer" ><i class="icon icon-head-transactions"></i><strong>Transactions</strong></a>
@@ -233,6 +238,18 @@
   <%= render BlockScoutWeb.LayoutView, "_search.html", conn: @conn, id: "main-search-autocomplete-mobile", additional_classes: ["mobile-search-show"] %>
 </nav>
 <% end %>
+<script>
+    const menuEl =  document.querySelector('.icon-app-nav-menu')
+    const closeEl =  document.querySelector('.icon-app-nav-close')
+    const navEl = document.querySelector('.fx-navbar')
+    navEl.addEventListener('click', function (e) {
+        if (e.target === menuEl) {
+            navEl.classList.add('show')
+        } else if (e.target === closeEl) {
+            navEl.classList.remove('show')
+        }
+    })
+</script>
 <style>
     :root{
         --fx-main-color: #080a32;
@@ -423,8 +440,37 @@
         color: var(--fx-main-color);
     }
 
-    .card-title.list-title-description{
 
+
+    .icon-app-nav-menu{
+        display: block;
+    }
+    .icon-app-nav-close{
+        display: none;
+    }
+    .fixed-filter{
+        display: none;
+    }
+    .fx-navbar.show .icon-app-nav-menu{
+            display: none;
+    }
+    .fx-navbar.show .icon-app-nav-close{
+        display: block;
+    }
+    .fx-navbar.show .fixed-filter{
+        display: block;
+    }
+    .icon-app-nav-menu,.icon-app-nav-close{
+        cursor: pointer;
+    }
+
+    @media screen and (max-width: 1199px) {
+        .fx-navbar nav{
+            display: none;
+        }
+        .fx-navbar.show nav{
+            display: block;
+        }
     }
 
 </style>

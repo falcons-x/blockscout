@@ -96,7 +96,7 @@
 </footer>
 <% else %>
 <footer class="fx-footer fx">
-  <div class="container">
+  <div class="fx-container">
     <p class="title-text">
       Copyright &copy; 2018 - 2022 Function X Foundation. All Rights
       Reserved.
