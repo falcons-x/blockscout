@@ -364,10 +364,7 @@
         transition: opacity .8s;
         background-image: linear-gradient(180deg,#ecf2fd,#fff);
     }
-    .tile.tile-type-block .tile-title{
-        margin-top: 64px;
-        padding: 0;
-    }
+
     .tile.tile-type-block:hover{
         box-shadow: 0 8px 20px 0 rgba(8,10,50,.06);
     }
@@ -377,28 +374,33 @@
     .tile.tile-type-block .tile-bottom-contents{
         padding: 0;
     }
+    .tile.tile-type-block .tile-bottom-contents .tile-transactions{
+        margin-bottom: 0;
+    }
     .tile.tile-type-block .tile-bottom-contents span{
         display: block;
+        font-size: 14px;
+        font-weight: 400;
     }
     .tile.tile-type-block .tile-bottom-contents span:nth-of-type(1){
-        margin-top: 24px;
         margin-right: 0 !important;
-        font-size: 14px;
         color: var(--fx-main-color);
         line-height: 24px;
-        font-weight: 400;
     }
     .tile.tile-type-block .tile-bottom-contents span:nth-of-type(2){
         margin-top: 64px;
-        font-size: 14px;
+        margin-left: 0 !important;
         color: var(--fx-sec-color);
         line-height: 18px;
-        font-weight: 400;
     }
 
 
+    /* 列表 交易 */
     .tile{
         padding: 0;
+    }
+    .tile+.tile{
+        margin-top: 32px;
     }
     .tile .row.tile-body{
         min-height: 200px;
@@ -429,11 +431,17 @@
             margin-top: 18px;
         }
     }
+    .tile .row.tile-body div:nth-of-type(2)>span:not(:nth-last-of-type(1)){
+        margin-bottom: 24px;
+    }
     .tile.tile-type-block .tile-title{
+        margin-top: 64px;
+        margin-bottom: 24px;
+        padding: 0;
         transition: color .3s ease;
         color: var(--fx-main-color);
         font-size: 24px;
-        line-height: 24px;
+        line-height: 1em;
         text-decoration: none;
     }
     .tile.tile-type-block .tile-title:hover{
@@ -449,9 +457,6 @@
     .tile .tile-body{
         font-size: 14px;
         line-height: 1.5em;
-    }
-    .row.tile-body>.d-flex.flex-column>span:not(:nth-last-of-type(1)){
-        margin-bottom: 24px;
     }
     .tile .tile-body a, .tile a[data-test=token_link], .tile span[data-address-hash]{
         color: var(--fx-main-color);
@@ -562,6 +567,11 @@
         padding-left: 36px;
         padding-right: 36px;
     }
+    .card-tabs+.card-body>.card-title,
+    .card-tabs+.card-body>.clearfix,
+    .card-tabs+.card-body>.top-pagination-outer-container{
+        display: none;
+    }
     @media (min-width: 992px) {
         .card-tab+.card-tab{
             margin-left: 4px;
@@ -593,6 +603,21 @@
         line-height: 1.5em;
         font-family: "cmr_medium","Helvetica Neue","PingFang SC","Microsoft YaHei","Simsun",Helvetica,Arial,Verdana,sans-serif;
         color: var(--fx-main-color);
+    }
+
+    section[data-page=block-list] .tile.tile-type-block{
+        min-height: initial;
+    }
+    section[data-page=block-list] .tile.tile-type-block .row{
+        margin-left: 0;
+        margin-right: 0;
+    }
+    section[data-page=block-list] .tile.tile-type-block .row>div:nth-of-type(2){
+        text-align: left;
+    }
+    section[data-page=block-list] .tile.tile-type-block .row>div:nth-of-type(2),
+    section[data-page=block-list] .tile.tile-type-block .row>div:nth-of-type(3){
+        padding: 16px;
     }
 
 
@@ -698,21 +723,74 @@
         }
     }
 
+    @media (min-width: 768px){
+        .fx-phone{
+            display: none;
+        }
+    }
     /* 小屏专有样式 */
     @media (max-width: 767px) {
+        .fx-pc{
+            display: none;
+        }
+
+        .card-body{
+            padding: 24px 20px;
+        }
+
+        /* 列表 块 */
+        .tile.tile-type-block{
+            min-height: 130px;
+        }
+        .tile.tile-type-block .tile-title{
+            font-size: 18px;
+            margin-top: 24px;
+            margin-bottom: 12px;
+        }
+        .tile.tile-type-block .tile-bottom-contents .tile-transactions span{
+            line-height: 1em;
+        }
+        .tile.tile-type-block .tile-bottom-contents span:nth-of-type(2){
+            margin-top: 24px;
+        }
+
+        /* 列表 交易 */
+
         .tile .row.tile-body{
             flex-wrap: wrap;
-            padding: 32px;
         }
         .tile .row.tile-body .tile-transaction-type-block{
             width: 100%;
             flex: 0 0 auto;
+            min-height: 72px;
+            background-color: #fbfbfb !important;
+            padding: 16px 20px;
+            margin-bottom: 0;
         }
         .tile .row.tile-body div:nth-of-type(2){
-            padding: 0;
+            padding: 16px 20px!important;
+        }
+        .tile .row.tile-body div:nth-of-type(2)>span:not(:nth-last-of-type(1)){
+            margin-bottom: 12px;
+        }
+        .tile .row.tile-body div:nth-of-type(2)>span:nth-last-of-type(1){
+            margin-top: 0!important;
+            flex-direction: row!important;
+        }
+        .tile .row.tile-body div:nth-of-type(2)>span:nth-last-of-type(1)>span:nth-last-of-type(1){
+            margin-left: 8px!important;
         }
         .tile .row.tile-body div:nth-of-type(3){
+            margin-top: 0!important;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-bottom: 16px;
             align-items: center;
+        }
+        .tile .row.tile-body div:nth-of-type(3) span{
+        }
+        .tile .row.tile-body div:nth-of-type(3) span:nth-of-type(2){
+            margin-left: auto;
         }
         .tile .text-nowrap{
             margin-left: 0 !important;

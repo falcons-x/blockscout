@@ -122,7 +122,8 @@
 
   <div class="card card-chain-transactions">
     <div class="card-body">
-      <%= link(gettext("View All Transactions"), to: transaction_path(BlockScoutWeb.Endpoint, :index), class: "btn-line float-right") %>
+      <%= link(gettext("View All Transactions"), to: transaction_path(BlockScoutWeb.Endpoint, :index), class: "btn-line float-right fx-pc") %>
+      <%= link(gettext("View All"), to: transaction_path(BlockScoutWeb.Endpoint, :index), class: "btn-line float-right fx-phone") %>
       <h2 class="card-title lg-card-title"><%= gettext "Transactions" %></h2>
       <div data-selector="channel-batching-message" style="display: none;">
         <div data-selector="reload-transactions-button" class="alert alert-info">

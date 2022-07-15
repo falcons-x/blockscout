@@ -39,6 +39,19 @@ $fx-tile-body-left-line-color: #f6f6f6;
       background-color: $line-color;
       z-index: 1;
     }
+    @media (max-width: 767px) {
+      &:before{
+        content:'';
+        position: absolute;
+        top: 16px;
+        left: 0;
+        box-sizing: border-box;
+        width: 4px;
+        height: 46px;
+        background-color: $line-color;
+        z-index: 1;
+      }
+    }
 
     .tile-transaction-type-block {
       a {
@@ -68,6 +81,16 @@ $fx-tile-body-left-line-color: #f6f6f6;
       line-height: 18px;
       margin-top: 16px;
       @include font-select('cmr_medium');
+    }
+    @media (max-width: 767px) {
+      .tile-label{
+        font-size: 18px;
+        line-height: 1em;
+      }
+      .tile-status-label{
+        margin-top: 8px;
+        line-height: 1em;
+      }
     }
 
     .tile-transaction-type-block {
