@@ -546,6 +546,40 @@
         padding-left: 36px;
         padding-right: 36px;
     }
+    @media (min-width: 992px) {
+        .card-tab+.card-tab{
+            margin-left: 4px;
+        }
+    }
+    @media (max-width: 991px) {
+        .card-tab{
+            margin-top: 4px;
+            margin-bottom: 4px;
+        }
+    }
+
+
+    /* 空结果提示信息 */
+    div[data-empty-response-message]{
+        padding-top: 284px;
+        padding-bottom: 64px;
+        background-image: url(/images/no-date@2x.png);
+        background-repeat: no-repeat;
+        background-size: 620px 220px;
+        background-position: center 64px;
+    }
+    div[data-empty-response-message] .tile{
+        padding-top: 12px;
+        padding-bottom: 12px;
+        border-width: 0;
+        background-color: transparent;
+        font-size: 24px;
+        line-height: 1.5em;
+        font-family: "cmr_medium","Helvetica Neue","PingFang SC","Microsoft YaHei","Simsun",Helvetica,Arial,Verdana,sans-serif;
+        color: var(--fx-main-color);
+    }
+
+
     section[data-page=transaction-details] .card .card-body .row:not(:nth-of-type(1)),
     .fx-address-details.card .card-body .row:not(:nth-of-type(1)){
         margin-top: 32px;
@@ -615,6 +649,20 @@
     .fx-navbar nav .back-link{
         display: none;
     }
+
+
+    .pre-scrollable{
+        padding: 32px;
+        border-radius: 16px;
+        background-color: #fbfbfb;
+    }
+    code.json div{
+        line-height: 52px;
+    }
+    .line-numbers [data-line-number]:before{
+        content: '';
+    }
+
 
     @media screen and (max-width: 1230px) {
         .fx-navbar.show .fixed-filter{
