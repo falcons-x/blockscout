@@ -1,5 +1,7 @@
+$fx-btn-line-color: #f6f6f6 !default;
+$fx-modal-overlay-color: rgba(#000000, .5) !default;
 .modal-backdrop {
-  background-color: $modal-overlay-color;
+  background-color: $fx-modal-overlay-color;
 
   &.show {
     opacity: 1;
@@ -55,16 +57,16 @@
   position: relative;
   .btn-primary {
     box-shadow: none !important;
-    background-color: $btn-line-color;
-    border: 1px solid $btn-line-color;
+    background-color: $fx-btn-line-color;
+    border: 1px solid $fx-btn-line-color;
     &:hover {
-      background-color: $btn-line-color;
-      border-color: $btn-line-color;
+      background-color: $fx-btn-line-color;
+      border-color: $fx-btn-line-color;
     }
     &:focus,
     &:active {
-      background-color: darken($btn-line-color, 10%) !important;
-      border-color: darken($btn-line-color, 10%) !important;
+      background-color: darken($fx-btn-line-color, 10%) !important;
+      border-color: darken($fx-btn-line-color, 10%) !important;
     }
   }
 }

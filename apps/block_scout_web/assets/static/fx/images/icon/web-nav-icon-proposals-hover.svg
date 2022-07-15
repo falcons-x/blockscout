@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>web-nav-icon-data-normal@1x</title>
+    <defs>
+        <linearGradient x1="0%" y1="91.048506%" x2="100%" y2="8.951494%" id="linearGradient-1">
+            <stop stop-color="#1D97C7" offset="0%"></stop>
+            <stop stop-color="#5178F0" offset="52.7845228%"></stop>
+            <stop stop-color="#875FF3" offset="100%"></stop>
+        </linearGradient>
+        <polygon id="path-2" points="8 9.429488 3.75735931 12.2426407 6.570512 8 3.75735931 3.75735931 8 6.570512 12.2426407 3.75735931 9.429488 8 12.2426407 12.2426407"></polygon>
+        <filter x="-18.7%" y="-18.7%" width="137.4%" height="137.4%" filterUnits="objectBoundingBox" id="filter-3">
+            <feGaussianBlur stdDeviation="2" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="4" dy="4" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1  0 0 0 0.683238636 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Fx_Explorer_Web" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Web_" transform="translate(-1230.000000, -22.000000)">
+            <g id="">
+                <g id="" transform="translate(1230.000000, 18.000000)">
+                    <g id="web-nav-icon-data-normal" transform="translate(0.000000, 4.000000)">
+                        <rect id="Rectangle" x="0" y="0" width="16" height="16"></rect>
+                        <path d="M8,10.38248 L12.0664011,13.0788222 L11.9896391,13.2006951 C11.618186,13.7373702 11.0048667,14.0621778 10.3452995,14.0621778 L5.65470054,14.0621778 C4.94694028,14.0621778 4.29243337,13.6881702 3.93288752,13.0797051 L8,10.38248 Z M3.14840108,4.27682217 L5.61752,8 L3.14940108,11.7228222 L1.57735027,9 C1.22008468,8.38119785 1.22008468,7.61880215 1.57735027,7 L3.14840108,4.27682217 Z M12.8504011,4.27782217 L14.4226497,7 C14.7799153,7.61880215 14.7799153,8.38119785 14.4226497,9 L12.8504011,11.7218222 L10.38248,8 L12.8504011,4.27782217 Z M10.3452995,1.93782217 C11.053458,1.93782217 11.7083033,2.31225083 12.0677192,2.92132239 L8,5.61752 L3.93240108,2.92082217 L4.01036092,2.79930486 C4.38181403,2.26262981 4.9951333,1.93782217 5.65470054,1.93782217 L10.3452995,1.93782217 Z" id="Combined-Shape" fill="url(#linearGradient-1)"></path>
+                        <g id="Star">
+                            <use fill="#0552DC" fill-rule="evenodd" xlink:href="#path-2"></use>
+                            <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
