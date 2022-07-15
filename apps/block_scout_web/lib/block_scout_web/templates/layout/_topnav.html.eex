@@ -698,6 +698,7 @@
         }
     }
 
+    /* 小屏专有样式 */
     @media (max-width: 767px) {
         .tile .row.tile-body{
             flex-wrap: wrap;
@@ -715,6 +716,17 @@
         }
         .tile .text-nowrap{
             margin-left: 0 !important;
+        }
+
+        .card-chain-transactions .card-title,.card-chain-blocks .card-title{
+            font-size: 26px;
+            line-height: 1em;
+        }
+        .card-chain-transactions .btn-line,.card-chain-blocks .btn-line{
+            margin-top: 0;
+            height: initial;
+            background-color: transparent;
+            line-height: 26px;
         }
     }
 
