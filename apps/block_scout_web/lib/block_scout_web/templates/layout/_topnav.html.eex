@@ -292,6 +292,9 @@
         padding-left: 16px;
         padding-right: 16px;
     }
+    .card-chain-transactions .btn-line,.card-chain-blocks .btn-line{
+        margin-top: 20px;
+    }
     .card-chain-blocks .btn-line{
         background-color: #FFF;
     }
@@ -330,6 +333,8 @@
         vertical-align: middle;
         margin-left: .5em;
     }
+
+    /* 列表 块 */
     .tile.tile-type-block{
         border-radius: 16px;
         transition: box-shadow 0.8s;
@@ -473,6 +478,17 @@
         line-height: 28px;
         font-family: "cmr_medium","Helvetica Neue","PingFang SC","Microsoft YaHei","Simsun",Helvetica,Arial,Verdana,sans-serif;
     }
+
+    .tile.tile-type-coin-balance{
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+    .tile.tile-type-coin-balance .row{
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+
     section[data-page=transaction-details] .card .card-title, .fx-address-details.card .address-detail-hash-title{
         margin-bottom: 80px!important;
     }
