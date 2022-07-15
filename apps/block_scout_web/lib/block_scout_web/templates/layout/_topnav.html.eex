@@ -258,7 +258,7 @@
     :root{
         --fx-main-color: #080a32;
         --fx-sec-color: rgba(8,10,50,.5);
-        --fx-body-bg: #fbfbfb;
+        --fx-body-bg: #FAFAFA;
         --fx-line-color: #f6f6f6;
         --fx-link-color: #0552dc;
     }
@@ -284,10 +284,30 @@
         font-size: 48px;
         line-height: 1.5em;
     }
+    .btn-line{
+        font-size: 14px;
+        line-height: 18px;
+        border-radius: 4px;
+        height: 32px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    .card-chain-blocks .btn-line{
+        background-color: #FFF;
+    }
+    .card-chain-transactions .btn-line{
+        background-color: var(--fx-body-bg);
+    }
     .card-title{
         font-size: 28px;
         line-height: 36px;
         font-family: "cmr_medium","Helvetica Neue","PingFang SC","Microsoft YaHei","Simsun",Helvetica,Arial,Verdana,sans-serif;
+    }
+    .card-chain-blocks .card-title{
+        margin-bottom: 32px;
+    }
+    .card-chain-transactions .card-title{
+        margin-bottom: 48px;
     }
     .btn-line{
         border-color: transparent;
@@ -298,7 +318,6 @@
         line-height: 1.5em;
     }
     .btn-line:hover{
-        background-color: transparent;
         color: var(--fx-link-color);
         text-decoration: none;
     }
@@ -316,6 +335,17 @@
         transition: box-shadow 0.8s;
         border: 1px solid rgba(8,10,50,.06);
         text-align: center;
+        min-height: 270px;
+    }
+    .tile.tile-type-block:after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -2;
+        background-color: #FFF;
     }
     .tile.tile-type-block:before{
         content: '';
@@ -326,8 +356,12 @@
         height: 100%;
         z-index: -1;
         opacity: 0;
-        transition: opacity .3s ease;
+        transition: opacity .8s;
         background-image: linear-gradient(180deg,#ecf2fd,#fff);
+    }
+    .tile.tile-type-block .tile-title{
+        margin-top: 64px;
+        padding: 0;
     }
     .tile.tile-type-block:hover{
         box-shadow: 0 8px 20px 0 rgba(8,10,50,.06);
@@ -335,10 +369,60 @@
     .tile.tile-type-block:hover:before{
         opacity: 1;
     }
+    .tile.tile-type-block .tile-bottom-contents{
+        padding: 0;
+    }
+    .tile.tile-type-block .tile-bottom-contents span{
+        display: block;
+    }
+    .tile.tile-type-block .tile-bottom-contents span:nth-of-type(1){
+        margin-top: 24px;
+        margin-right: 0 !important;
+        font-size: 14px;
+        color: var(--fx-main-color);
+        line-height: 24px;
+        font-weight: 400;
+    }
+    .tile.tile-type-block .tile-bottom-contents span:nth-of-type(2){
+        margin-top: 64px;
+        font-size: 14px;
+        color: var(--fx-sec-color);
+        line-height: 18px;
+        font-weight: 400;
+    }
 
 
     .tile{
-        padding: 32px;
+        padding: 0;
+    }
+    .tile .row.tile-body{
+        min-height: 200px;
+        margin-left: 0;
+        margin-right: 0;
+        flex-wrap: initial;
+    }
+    .tile .row.tile-body .tile-transaction-type-block{
+        width: 240px;
+        flex: 0 0 240px;
+        padding: 0;
+        max-width: initial;
+    }
+    .tile .row.tile-body div:nth-of-type(2){
+        justify-content: center;
+        padding-left: 24px;
+        flex-shrink: 1;
+        flex-grow: 1;
+        width: 100px;
+        max-width: initial;
+    }
+    .tile .row.tile-body div:nth-of-type(3){
+        padding-left: 0;
+        padding-right: 24px;
+    }
+    @media (min-width: 768px) {
+        .tile .row.tile-body div:nth-of-type(3) span:not(:nth-of-type(1)){
+            margin-top: 18px;
+        }
     }
     .tile.tile-type-block .tile-title{
         transition: color .3s ease;
@@ -362,7 +446,7 @@
         line-height: 1.5em;
     }
     .row.tile-body>.d-flex.flex-column>span:not(:nth-last-of-type(1)){
-        margin-bottom: 12px;
+        margin-bottom: 24px;
     }
     .tile .tile-body a, .tile a[data-test=token_link], .tile span[data-address-hash]{
         color: var(--fx-main-color);
@@ -382,34 +466,90 @@
     }
     .tile .text-nowrap{
         color: var(--fx-sec-color);
+        margin-left: 12px!important;
     }
     .tile .tile-bottom a{
         font-size: 16px;
         line-height: 28px;
         font-family: "cmr_medium","Helvetica Neue","PingFang SC","Microsoft YaHei","Simsun",Helvetica,Arial,Verdana,sans-serif;
     }
-
+    section[data-page=transaction-details] .card .card-title, .fx-address-details.card .address-detail-hash-title{
+        margin-bottom: 80px!important;
+    }
+    .fx-address-details.card .card-title{
+        margin-bottom: 32px!important;
+     }
     section[data-page=transaction-details] .card .card-body,.fx-address-details.card .card-body{
         transform: translate(0, 0);
         position: relative;
     }
-    section[data-page=transaction-details] .card .card-body:before,.fx-address-details.card .card-body:before{
+
+    section[data-page=transaction-details] .card .card-body .row,
+    .fx-address-details.card .card-body .row{
+        position: relative;
+        padding-left: 17px;
+        padding-right: 17px;
+        margin-left: initial;
+        margin-right: initial;
+    }
+    section[data-page=transaction-details] .card .card-body .row:before{
         content: '';
         position: absolute;
         z-index: -1;
         background-color: var(--fx-body-bg);
-        top: 80px;
+        top: -32px;
+        left: 0;
+        right: 0;
+        bottom: -32px;
+    }
+    .fx-address-details.card .card-body .row:before{
+        content: '';
+        position: absolute;
+        z-index: -1;
+        background-color: var(--fx-body-bg);
+        top: -32px;
         left: 0;
         right: 0;
         bottom: 0;
-        border-radius: 18px;
     }
+    section[data-page=transaction-details] .card .card-body .row:nth-of-type(1):before,
+    .fx-address-details.card .card-body .row:nth-of-type(1):before{
+        border-top-left-radius: 16px;
+        border-top-right-radius: 16px;
+    }
+    section[data-page=transaction-details] .card .card-body .row:nth-last-of-type(1):before{
+        border-bottom-right-radius: 16px;
+        border-bottom-left-radius: 16px;
+    }
+    section[data-page=transaction-details] .card .card-body:before,
     .fx-address-details.card .card-body:before{
-        top: 110px;
+        content: '';
+        position: absolute;
+        z-index: -1;
+        background-color: var(--fx-body-bg);
+        height: 32px;
+        left: 32px;
+        right: 32px;
+        bottom: 0;
+        border-bottom-right-radius: 16px;
+        border-bottom-left-radius: 16px;
     }
-    section[data-page=transaction-details] .card .row:not(:nth-last-of-type(1)){
-        margin-bottom: 32px;
-        margin-top: 0;
+    .confirmations-label:after{
+        border-left-color:  var(--fx-body-bg);
+    }
+    .card-tabs{
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+    .card-tab{
+        height: 48px;
+        padding-left: 36px;
+        padding-right: 36px;
+    }
+    section[data-page=transaction-details] .card .card-body .row:not(:nth-of-type(1)),
+    .fx-address-details.card .card-body .row:not(:nth-of-type(1)){
+        margin-top: 32px;
+        margin-bottom: 0;
     }
     section[data-page=transaction-details] .card .row .text-muted{
         color: var(--fx-sec-color)!important;
@@ -491,6 +631,26 @@
         }
         .fx-navbar nav .icon-back{
             vertical-align: middle;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .tile .row.tile-body{
+            flex-wrap: wrap;
+            padding: 32px;
+        }
+        .tile .row.tile-body .tile-transaction-type-block{
+            width: 100%;
+            flex: 0 0 auto;
+        }
+        .tile .row.tile-body div:nth-of-type(2){
+            padding: 0;
+        }
+        .tile .row.tile-body div:nth-of-type(3){
+            align-items: center;
+        }
+        .tile .text-nowrap{
+            margin-left: 0 !important;
         }
     }
 

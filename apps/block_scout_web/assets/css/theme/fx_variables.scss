@@ -1,11 +1,13 @@
 // general
-$primary: #0552DC;
+$primary: #080A32;
 $secondary: #1bb3dc;
 $tertiary: #94c03a;
 $additional-font: #00ffff;
 
 $fx-main: #080A32;
 $fx-main-sec: rgba($fx-main, 0.5);
+$fx-point: #671BDC;
+$fx-point-sec: #71A800;
 
 // footer
 $footer-background-color: #ffffff;
@@ -17,7 +19,7 @@ $footer-item-disc-color: #0552DC;
 // dashboard
 $dashboard-line-color-price: #71A800; // price left border
 $dashboard-line-color-market: #0552DC;
-$dashboard-line-color-transactions: #671BDC;
+$dashboard-line-color-transactions: $fx-point;
 
 $dashboard-banner-chart-legend-label-color: $fx-main-sec;
 $dashboard-stats-item-label-color: $dashboard-banner-chart-legend-label-color;
@@ -60,6 +62,7 @@ $tile-body-a-color: $primary;
 $tile-type-block-color: $primary;
 $tile-type-progress-bar-color: $primary;
 //a.tile-title { color: $primary !important; }
+$fx-tile-mian-color: $fx-main;
 
 // card
 $card-background-1: $primary;
@@ -93,6 +96,8 @@ body{
 $badge-neutral-color: $primary;
 $badge-neutral-background-color: rgba($primary, .1);
 $api-text-monospace-color: $primary;
+$badge-success-color: $fx-point-sec;
+$badge-danger-color: $fx-point;
 
 // Tokens dropdown
 .token-balance-dropdown[aria-labelledby="dropdown-tokens"] {
