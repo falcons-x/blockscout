@@ -7,6 +7,73 @@ $footer-social-icon-color: $footer-text-color !default;
 $footer-logo-height: 28px !default;
 $footer-logo-width: auto !default;
 
+
+@import "../fx/common";
+
+.fx.fx-footer {
+  @include mediaPhone {
+    height: 100%;
+  }
+  .fx-container {
+    @include mediaPhone {
+      flex-direction: column;
+      padding: 17px;
+      box-sizing: border-box;
+    }
+
+    .title-text {
+      @include mediaPhone {
+        font-size: 12px;
+        line-height: 20px;
+        text-align: center;
+        margin-bottom: 16px;
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+    }
+  }
+
+  .other {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    a {
+      display: flex;
+      margin-left: 24px;
+      transition: all $fx-transition-all-time ease;
+
+      &:not(.help) {
+        opacity: 0.2;
+
+        @include checkHover {
+          &:hover {
+            opacity: 0.5;
+          }
+        }
+      }
+
+      &.help {
+        align-items: center;
+        padding: 5px 12px;
+        background-color: #FAFAFA;
+        border-radius: 14px;
+
+        .icon {
+          margin-right: 4px;
+          transition: all $fx-transition-all-time ease;
+        }
+
+        &:hover{
+          .icon {
+            @extend .icon-footer-help-hover
+          }
+        }
+      }
+
+    }
+  }
+}
+
 .footer {
   background: $footer-background-color;
   color: $footer-text-color;
@@ -96,7 +163,7 @@ $footer-logo-width: auto !default;
         transition: $transition-cont;
         &:hover {
           text-decoration: none;
-          color: #fff;
+          color: rgba($footer-text-color, 1);
         }
         &:focus {
           color: darken($footer-text-color, 5);

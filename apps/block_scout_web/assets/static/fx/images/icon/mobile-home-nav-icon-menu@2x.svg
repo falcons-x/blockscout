@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>mobile-home-nav-icon-menu@2x</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="375" height="50"></rect>
+        <filter x="-0.1%" y="-0.5%" width="100.1%" height="102.0%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="0.5" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feComposite in="shadowOffsetOuter1" in2="SourceAlpha" operator="out" result="shadowOffsetOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.031372549   0 0 0 0 0.0392156863   0 0 0 0 0.196078431  0 0 0 0.1 0" type="matrix" in="shadowOffsetOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="fx_web2021_fxExplorer_v1.1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="切图" transform="translate(-2425.000000, -193.000000)">
+            <g id="头部/导航/通用" transform="translate(2090.000000, 180.000000)">
+                <g>
+                    <g id="nav-bg">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                        <use fill-opacity="0.678403628" fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    </g>
+                    <g id="Group" transform="translate(335.000000, 13.000000)" fill="#080A32">
+                        <path d="M19.5,16.5 C20.3284271,16.5 21,17.1715729 21,18 C21,18.8284271 20.3284271,19.5 19.5,19.5 L4.5,19.5 C3.67157288,19.5 3,18.8284271 3,18 C3,17.1715729 3.67157288,16.5 4.5,16.5 L19.5,16.5 Z M19.5,10.5 C20.3284271,10.5 21,11.1715729 21,12 C21,12.8284271 20.3284271,13.5 19.5,13.5 L4.5,13.5 C3.67157288,13.5 3,12.8284271 3,12 C3,11.1715729 3.67157288,10.5 4.5,10.5 L19.5,10.5 Z M19.5,4.5 C20.3284271,4.5 21,5.17157288 21,6 C21,6.82842712 20.3284271,7.5 19.5,7.5 L4.5,7.5 C3.67157288,7.5 3,6.82842712 3,6 C3,5.17157288 3.67157288,4.5 4.5,4.5 L19.5,4.5 Z" id="Combined-Shape"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
