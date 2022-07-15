@@ -1,0 +1,30 @@
+@font-face {
+  font-family: 'cmr_medium';
+  src: url('../static/fx/fonts/cash-market-rounded-medium.woff2');
+}
+@font-face {
+  font-family: 'cmr_regular';
+  src: url('../static/fx/fonts/cash-market-rounded-regular.woff2');
+}
+
+
+@mixin font-select($name: '') {
+  @if $name != '' {
+    font-family: $name,"Helvetica Neue","PingFang SC","Microsoft YaHei","Simsun",Helvetica,Arial,Verdana,sans-serif;
+  } @else {
+    font-family: "Helvetica Neue","PingFang SC","Microsoft YaHei","Simsun",Helvetica,Arial,Verdana,sans-serif;
+  }
+  -webkit-font-smoothing: antialiased;
+}
+
+input, button {
+  @include font-select;
+}
+
+.font-bold{
+  @include font-select('cmr_medium');
+  font-weight: normal;
+}
+.font-condensed{
+  @include font-select('cmr_regular');
+}

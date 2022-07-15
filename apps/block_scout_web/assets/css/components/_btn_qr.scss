@@ -1,6 +1,7 @@
 $btn-qr-color: $primary !default;
 $btn-qr-dimensions: 31px !default;
+$fx-btn-qr-color: $fx-main !default;
 
 .btn-qr-icon {
-  @include square-icon-button($btn-qr-color, $btn-qr-dimensions);
+  @include square-icon-button($fx-btn-qr-color, $btn-qr-dimensions);
 }

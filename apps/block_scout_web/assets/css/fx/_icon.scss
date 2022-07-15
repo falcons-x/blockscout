@@ -1,0 +1,120 @@
+.icon {
+  display: inline-block;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  &.icon-head-home {
+    width: 16px;
+    height: 16px;
+    background-image: url(../static/fx/images/icon/web-nav-icon-home-hover@1x.svg);
+  }
+
+  &.icon-head-blocks {
+    width: 16px;
+    height: 16px;
+    background-image: url(../static/fx/images/icon/web-nav-icon-blocks-hover@1x.svg);
+  }
+
+  &.icon-head-transactions {
+    width: 16px;
+    height: 16px;
+    background-image: url(../static/fx/images/icon/web-nav-icon-transactions-hover@1x.svg);
+  }
+
+  &.icon-head-validator {
+    width: 16px;
+    height: 16px;
+    background-image: url(../static/fx/images/icon/web-nav-icon-accounts-hover@1x.svg);
+  }
+
+  &.icon-head-data {
+    width: 16px;
+    height: 16px;
+    background-image: url(../static/fx/images/icon/web-nav-icon-data-hover@1x.svg);
+  }
+
+  &.icon-head-Proposals {
+    width: 16px;
+    height: 16px;
+    background-image: url(../static/fx/images/icon/web-nav-icon-proposals-hover.svg);
+  }
+  &.icon-back {
+    width: 24px;
+    height: 24px;
+    background-image: url(../static/fx/images/icon/back@2x.svg);
+  }
+  &.icon-arrow-right {
+    width: 24px;
+    height: 24px;
+    background-image: url(../static/fx/images/icon/arrow.svg);
+  }
+  &.icon-app-nav-menu {
+    width: 24px;
+    height: 24px;
+    background-image: url(../static/fx/images/icon/mobile-home-nav-icon-menu@2x.svg);
+  }
+  &.icon-app-nav-close {
+    width: 24px;
+    height: 24px;
+    background-image: url(../static/fx/images/icon/mobile-home-nav-icon-close@2x.svg);
+  }
+
+  &.icon-social-footer-telegram {
+    width: 32px;
+    height: 32px;
+    background-image: url(../static/fx/images/icon/fx-telegram.svg);
+  }
+  &.icon-social-footer-medium {
+    width: 32px;
+    height: 32px;
+    background-image: url(../static/fx/images/icon/medium.svg);
+  }
+  &.icon-social-footer-facebook {
+    width: 32px;
+    height: 32px;
+    background-image: url(../static/fx/images/icon/facebook.svg);
+  }
+  &.icon-social-footer-twitter {
+    width: 32px;
+    height: 32px;
+    background-image: url(../static/fx/images/icon/fx-twitter.svg);
+  }
+  &.icon-social-footer-discord {
+    width: 32px;
+    height: 32px;
+    background-image: url(../static/fx/images/icon/discord.svg);
+  }
+  &.icon-social-footer-github {
+    width: 32px;
+    height: 32px;
+    background-image: url(../static/fx/images/icon/fx-github.svg);
+  }
+  &.icon-social-footer-email {
+    width: 32px;
+    height: 32px;
+    background-image: url(../static/fx/images/icon/email.svg);
+  }
+  &.icon-social-footer-youtube {
+    width: 32px;
+    height: 32px;
+    background-image: url(../static/fx/images/icon/youtube.svg);
+  }
+
+
+  &.icon-social-footer-forum{
+    width: 32px;
+    height: 32px;
+    background-image: url(../static/fx/images/icon/forum.svg);
+  }
+
+  &.icon-footer-help {
+    width: 16px;
+    height: 16px;
+    background-image: url(../static/fx/images/icon/help.svg);
+  }
+  &.icon-footer-help-hover {
+    width: 16px;
+    height: 16px;
+    background-image: url(../static/fx/images/icon/help-hover.svg);
+  }
+}

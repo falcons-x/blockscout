@@ -16,6 +16,7 @@ $btn-copy-small-dimensions: 22px !default;
   svg {
     width: $btn-copy-dimensions;
     height: $btn-copy-dimensions;
+    float: inherit;
   }
   &.btn-copy-icon-small {
     &.btn-copy-icon-custom {

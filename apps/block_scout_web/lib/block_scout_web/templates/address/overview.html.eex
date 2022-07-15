@@ -8,7 +8,7 @@
   <div class="row js-ad-dependant-mb-2 js-ad-dependant-mb-5-reverse">
     <!-- Address details -->
     <div class="col-md-12 js-ad-dependant-mb-2">
-      <div class="card js-ad-dependant-mb-2">
+      <div class="card fx-address-details js-ad-dependant-mb-2">
         <div class="card-body fs-14" style="line-height: 31px;">
           <%= cond do %>
             <% Enum.member?(dark_forest_addresses_list_0_4, current_address) -> %>
