@@ -5,7 +5,7 @@
     <div class="fx-container">
         <div class="fixed-filter"></div>
         <div class="logo flex">
-            <a href="https://explorer.functionx.io/">
+            <a href="<%= fx_explorer_url() %>">
                 <img alt="Function X Explorer" srcset="" src="/images/web_home_nav_icon_logo.svg"/>
             </a>
             <div class="layout-search-common">
@@ -20,12 +20,12 @@
             </div>
         </div>
         <nav class="phone-not-show flex-center">
-            <a href="https://explorer.functionx.io/" target="_blank" rel="noopener noreferrer" ><i class="icon icon-head-home"></i><strong>Home</strong></a>
-            <a href="https://explorer.functionx.io/fxcore/blocks" target="_blank" rel="noopener noreferrer" ><i class="icon icon-head-blocks"></i><strong>Blocks</strong></a>
-            <a href="https://explorer.functionx.io/fxcore/txs" target="_blank" rel="noopener noreferrer" ><i class="icon icon-head-transactions"></i><strong>Transactions</strong></a>
-            <a href="https://explorer.functionx.io/fxcore/validators" target="_blank" rel="noopener noreferrer" ><i class="icon icon-head-validator"></i><strong>Validator</strong></a>
-            <a href="https://explorer.functionx.io/fxcore/datas" target="_blank" rel="noopener noreferrer" ><i class="icon icon-head-data"></i><strong>Data</strong></a>
-            <a href="https://explorer.functionx.io/fxcore/proposals" target="_blank" rel="noopener noreferrer" ><i class="icon icon-head-data"></i><strong>Proposals</strong></a>
+            <a href="<%= fx_explorer_url() %>" target="_blank" rel="noopener noreferrer" ><i class="icon icon-head-home"></i><strong>Home</strong></a>
+            <a href="<%= fx_explorer_url() %>/fxcore/blocks" target="_blank" rel="noopener noreferrer" ><i class="icon icon-head-blocks"></i><strong>Blocks</strong></a>
+            <a href="<%= fx_explorer_url() %>/fxcore/txs" target="_blank" rel="noopener noreferrer" ><i class="icon icon-head-transactions"></i><strong>Transactions</strong></a>
+            <a href="<%= fx_explorer_url() %>/fxcore/validators" target="_blank" rel="noopener noreferrer" ><i class="icon icon-head-validator"></i><strong>Validator</strong></a>
+            <a href="<%= fx_explorer_url() %>/fxcore/datas" target="_blank" rel="noopener noreferrer" ><i class="icon icon-head-data"></i><strong>Data</strong></a>
+            <a href="<%= fx_explorer_url() %>/fxcore/proposals" target="_blank" rel="noopener noreferrer" ><i class="icon icon-head-data"></i><strong>Proposals</strong></a>
             <a class="back-link" href="https://functionx.io" target="_blank" rel="noopener noreferrer">
                 <i class="icon icon-back"></i>
                 <strong>Back to Function X</strong>
