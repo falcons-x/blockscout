@@ -25,7 +25,7 @@
             <a href="<%= fx_explorer_url() %>/fxcore/txs" target="_blank" rel="noopener noreferrer" ><i class="icon icon-head-transactions"></i><strong>Transactions</strong></a>
             <a href="<%= fx_explorer_url() %>/fxcore/validators" target="_blank" rel="noopener noreferrer" ><i class="icon icon-head-validator"></i><strong>Validators</strong></a>
             <a href="<%= fx_explorer_url() %>/fxcore/datas" target="_blank" rel="noopener noreferrer" ><i class="icon icon-head-data"></i><strong>Statistics</strong></a>
-            <a href="<%= fx_explorer_url() %>/fxcore/proposals" target="_blank" rel="noopener noreferrer" ><i class="icon icon-head-data"></i><strong>Proposals</strong></a>
+            <a href="<%= fx_explorer_url() %>/fxcore/proposals" target="_blank" rel="noopener noreferrer" ><i class="icon icon-head-Proposals"></i><strong>Proposals</strong></a>
             <a class="back-link" href="https://functionx.io" target="_blank" rel="noopener noreferrer">
                 <i class="icon icon-back"></i>
                 <strong>Back to Function X</strong>
