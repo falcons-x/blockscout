@@ -414,13 +414,15 @@
         padding: 0;
         max-width: initial;
     }
-    .tile .row.tile-body div:nth-of-type(2){
+    .tile .row.tile-body>div:nth-of-type(2){
         justify-content: center;
         padding-left: 24px;
         flex-shrink: 1;
         flex-grow: 1;
         width: 100px;
         max-width: initial;
+        padding-top: 16px;
+        padding-bottom: 16px;
     }
     .tile .row.tile-body div:nth-of-type(3){
         padding-left: 0;
@@ -431,8 +433,12 @@
             margin-top: 18px;
         }
     }
-    .tile .row.tile-body div:nth-of-type(2)>span:not(:nth-last-of-type(1)){
-        margin-bottom: 24px;
+    .tile .row.tile-body>div:nth-of-type(2)>*:not(:nth-last-child(1)){
+        margin-top: 0!important;
+        margin-bottom: 24px!important;
+        padding-top: 0!important;
+        padding-bottom: 0!important;
+        white-space: nowrap;
     }
     .tile.tile-type-block .tile-title{
         margin-top: 64px;
@@ -742,6 +748,11 @@
             display: none;
         }
     }
+    @media (max-width: 991px) {
+        .tile .row.tile-body>div:nth-of-type(2)>*:not(:nth-last-child(1)){
+            white-space: initial;
+        }
+    }
     /*  */
     @media (max-width: 767px) {
         .fx-pc{
@@ -781,17 +792,17 @@
             padding: 16px 20px;
             margin-bottom: 0;
         }
-        .tile .row.tile-body div:nth-of-type(2){
+        .tile .row.tile-body>div:nth-of-type(2){
             padding: 16px 20px!important;
         }
-        .tile .row.tile-body div:nth-of-type(2)>span:not(:nth-last-of-type(1)){
+        .tile .row.tile-body>div:nth-of-type(2)>*:not(:nth-last-child(1)){
             margin-bottom: 12px;
         }
-        .tile .row.tile-body div:nth-of-type(2)>span:nth-last-of-type(1){
+        .tile .row.tile-body>div:nth-of-type(2)>*:nth-last-child(1){
             margin-top: 0!important;
             flex-direction: row!important;
         }
-        .tile .row.tile-body div:nth-of-type(2)>span:nth-last-of-type(1)>span:nth-last-of-type(1){
+        .tile .row.tile-body>div:nth-of-type(2)>span:nth-last-child(1)>span:nth-last-child(1){
             margin-left: 8px!important;
         }
         .tile .row.tile-body div:nth-of-type(3){
