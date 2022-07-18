@@ -704,6 +704,20 @@
         content: '';
     }
 
+    /* QR */
+    .modal .modal-dialog{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+    .modal .btn-primary,.modal .button-primary{
+        color: var(--fx-main-color);
+        font-family: "cmr_medium","Helvetica Neue","PingFang SC","Microsoft YaHei","Simsun",Helvetica,Arial,Verdana,sans-serif;
+    }
+
+
 
     @media screen and (max-width: 1230px) {
         .fx-navbar.show .fixed-filter{

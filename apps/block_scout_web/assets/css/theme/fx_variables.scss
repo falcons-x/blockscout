@@ -8,6 +8,7 @@ $fx-main: #080A32;
 $fx-main-sec: rgba($fx-main, 0.5);
 $fx-point: #671BDC;
 $fx-point-sec: #71A800;
+$fx-btn-color: #f6f6f6;
 
 // footer
 $footer-background-color: #ffffff;
@@ -46,13 +47,14 @@ $header-icon-border-color-hover: $primary;
 
 // buttons
 $btn-line-bg: #fff; // button bg
-$btn-line-color: #f6f6f6; // button border and font color && hover bg color
+$btn-line-color: $fx-btn-color; // button border and font color && hover bg color
 $btn-copy-color: $fx-main; // btn copy
 $btn-qr-color: $primary; // btn qr-code
 $btn-address-card-icon-color: $primary; // btn address color
-$fx-tooltip-background-color: #f6f6f6;
+$fx-tooltip-background-color: $fx-btn-color;
 $fx-tooltip-color: $fx-main;
 $fx-btn-qr-color: $fx-main;
+$fx-btn-line-color: $fx-btn-color;
 .download-all-transactions a.download-all-transactions-link svg path {
 	fill: $fx-main;
 }
@@ -110,6 +112,11 @@ $badge-danger-color: $fx-point;
 //.card{
 //	box-shadow: 0 8px 20px 0 rgba(8, 10, 50 , 0.08) !important;
 //}
+
+// modal
+$fx-modal-overlay-color: rgba(#000000, .5);
+$modal-overlay-color:rgba(#000000, .5);
+
 
 // Dark theme
 $dark-primary: #3D84FE;
