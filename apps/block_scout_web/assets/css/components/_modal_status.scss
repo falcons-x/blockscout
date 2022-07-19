@@ -2,6 +2,8 @@ $modal-status-graph-error: #ff0d51 !default;
 $modal-status-graph-warning: #ff8502 !default;
 $modal-status-graph-success: $primary !default;
 $modal-status-graph-question: #329ae9 !default;
+$fx-modal-status-graph-success: #080A32;
+$fx-modal-status-btn: #080A32;
 
 .modal-status {
   max-width: 100%;
@@ -30,7 +32,7 @@ $modal-status-graph-question: #329ae9 !default;
   }
 
   &-success {
-    background-color: $modal-status-graph-success;
+    background-color: $fx-modal-status-graph-success;
   }
 
   &-question {
@@ -88,11 +90,11 @@ $modal-status-graph-question: #329ae9 !default;
   .btn-line {
     flex-grow: 1;
     margin-right: 20px;
-    border-color: $primary;
-    color: $primary;
+    border-color: $fx-modal-status-btn;
+    color: $fx-modal-status-btn;
 
     &:hover {
-      background-color: $primary;
+      background-color: $fx-modal-status-btn;
       color: $additional-font;
     }
 
