@@ -343,6 +343,13 @@
         text-align: center;
         min-height: 270px;
     }
+    .card-chain-blocks div[data-selector="place-holder"]>.tile.tile-type-block{
+        justify-content: center;
+    }
+    .card-chain-blocks div[data-selector="place-holder"]>.tile.tile-type-block>.loading-spinner-small{
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
     .tile.tile-type-block:after{
         content: '';
         position: absolute;
@@ -564,7 +571,7 @@
         border-bottom-right-radius: 16px;
         border-bottom-left-radius: 16px;
     }
-    section[data-page=transaction-details] .card .card-body:before,
+    section[data-page=transaction-details]>.row:nth-child(1) .card .card-body:before,
     .fx-address-details.card .card-body:before{
         content: '';
         position: absolute;
