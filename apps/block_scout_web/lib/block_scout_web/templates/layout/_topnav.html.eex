@@ -503,6 +503,7 @@
         margin-right: 0;
     }
 
+    /*  */
 
     section[data-page=transaction-details] .card .card-title, .fx-address-details.card .address-detail-hash-title{
         margin-bottom: 80px!important;
@@ -515,15 +516,15 @@
         position: relative;
     }
 
-    section[data-page=transaction-details] .card .card-body .row,
-    .fx-address-details.card .card-body .row{
+    section[data-page=transaction-details] .card>.card-body>.row,
+    .fx-address-details.card>.card-body>.row{
         position: relative;
         padding-left: 17px;
         padding-right: 17px;
         margin-left: initial;
         margin-right: initial;
     }
-    section[data-page=transaction-details] .card .card-body .row:before{
+    section[data-page=transaction-details] .card>.card-body>.row:before{
         content: '';
         position: absolute;
         z-index: -1;
@@ -533,7 +534,7 @@
         right: 0;
         bottom: -32px;
     }
-    .fx-address-details.card .card-body .row:before{
+    .fx-address-details.card>.card-body>.row:before{
         content: '';
         position: absolute;
         z-index: -1;
@@ -543,12 +544,12 @@
         right: 0;
         bottom: 0;
     }
-    section[data-page=transaction-details] .card .card-body .row:nth-of-type(1):before,
-    .fx-address-details.card .card-body .row:nth-of-type(1):before{
+    section[data-page=transaction-details] .card>.card-body>.row:nth-of-type(1):before,
+    .fx-address-details.card>.card-body>.row:nth-of-type(1):before{
         border-top-left-radius: 16px;
         border-top-right-radius: 16px;
     }
-    section[data-page=transaction-details] .card .card-body .row:nth-last-of-type(1):before{
+    section[data-page=transaction-details] .card>.card-body>.row:nth-last-of-type(1):before{
         border-bottom-right-radius: 16px;
         border-bottom-left-radius: 16px;
     }
@@ -564,6 +565,9 @@
         bottom: 0;
         border-bottom-right-radius: 16px;
         border-bottom-left-radius: 16px;
+    }
+    .fx-address-details.card .btn-wallet-icon,.fx-address-details.card .btn-wallet-icon:hover{
+        color: var(--fx-main-color);
     }
     .confirmations-label:after{
         border-left-color:  var(--fx-body-bg);
@@ -632,8 +636,8 @@
     }
 
 
-    section[data-page=transaction-details] .card .card-body .row:not(:nth-of-type(1)),
-    .fx-address-details.card .card-body .row:not(:nth-of-type(1)){
+    section[data-page=transaction-details] .card>.card-body>.row:not(:nth-of-type(1)),
+    .fx-address-details.card>.card-body>.row:not(:nth-of-type(1)){
         margin-top: 32px;
         margin-bottom: 0;
     }
