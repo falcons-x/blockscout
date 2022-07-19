@@ -759,6 +759,14 @@
         }
     }
 
+    /* Transaction Details > logs */
+
+    .tile.tile-muted>.row{
+        margin-left: 0;
+        margin-right: 0;
+        padding-bottom: 1em;
+    }
+
 
 
     @media screen and (max-width: 1230px) {
