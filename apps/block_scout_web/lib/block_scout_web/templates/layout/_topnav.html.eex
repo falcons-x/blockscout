@@ -261,6 +261,7 @@
         --fx-body-bg: #FAFAFA;
         --fx-line-color: #f6f6f6;
         --fx-link-color: #0552dc;
+        --fx-tx-box-height: 200px;
     }
     a{
         color: var(--fx-main-color);
@@ -403,12 +404,13 @@
         margin-top: 32px;
     }
     .tile .row.tile-body{
-        min-height: 200px;
+        min-height: var(--fx-tx-box-height);
         margin-left: 0;
         margin-right: 0;
         flex-wrap: initial;
     }
-    .tile .row.tile-body .tile-transaction-type-block{
+    .tile .row.tile-body .tile-transaction-type-block,
+    .tile.tile-type-token-transfer>.row>.tile-label{
         width: 240px;
         flex: 0 0 240px;
         padding: 0;
@@ -435,8 +437,10 @@
     }
     .tile .row.tile-body>div:nth-of-type(2)>*:not(:nth-last-child(1)){
         margin-top: 0!important;
+        margin-left: 0!important;
         margin-bottom: 24px!important;
         padding-top: 0!important;
+        padding-left: 0!important;
         padding-bottom: 0!important;
         white-space: nowrap;
     }
@@ -480,7 +484,7 @@
         font-size: 14px;
         line-height: 1.5em;
     }
-    .tile .text-nowrap{
+    .tile.tile-type-token-transfer .tile-title+span{
         color: var(--fx-sec-color);
         margin-left: 12px!important;
     }
@@ -575,7 +579,8 @@
     }
     .card-tabs+.card-body>.card-title,
     .card-tabs+.card-body>.clearfix,
-    .card-tabs+.card-body>.top-pagination-outer-container{
+    .card-tabs+.card-body>.top-pagination-outer-container,
+    .card-tabs+.card-body>.list-top-pagination-container-wrapper{
         display: none;
     }
     @media (min-width: 992px) {
@@ -723,6 +728,37 @@
         font-family: "cmr_medium","Helvetica Neue","PingFang SC","Microsoft YaHei","Simsun",Helvetica,Arial,Verdana,sans-serif;
     }
 
+    /* Transaction Details > Token Transfers list */
+
+    .tile.tile-type-token-transfer>.row{
+        margin-left: 0;
+        margin-right: 0;
+        flex-wrap: nowrap;
+        min-height: var(--fx-tx-box-height);
+        justify-content: flex-start !important;
+        font-size: 14px;
+        line-height: 1.5em;
+    }
+    .tile.tile-type-token-transfer>.row>.tile-label{
+        background-color: #fbfbfb;
+        justify-content: center !important;
+    }
+    .tile.tile-type-token-transfer>.row>.tile-label+*:nth-child(2){
+        flex-shrink: 1;
+        flex-grow: 1;
+        width: 100px;
+        padding: 16px 24px;
+        justify-content: center;
+    }
+    .tile.tile-type-token-transfer>.row>.tile-label+*:nth-child(2)>*:not(:nth-last-child(1)){
+        margin-bottom: 24px;
+    }
+    @media (max-width: 767px) {
+        .tile.tile-type-token-transfer>.row{
+            flex-wrap: wrap;
+        }
+    }
+
 
 
     @media screen and (max-width: 1230px) {
@@ -750,7 +786,7 @@
     }
     @media (max-width: 991px) {
         .tile .row.tile-body>div:nth-of-type(2)>*:not(:nth-last-child(1)){
-            white-space: initial;
+            white-space: initial!important;;
         }
     }
     /*  */
@@ -779,12 +815,13 @@
             margin-top: 24px;
         }
 
-        /*   */
+        /* block list  */
 
         .tile .row.tile-body{
             flex-wrap: wrap;
         }
-        .tile .row.tile-body .tile-transaction-type-block{
+        .tile .row.tile-body .tile-transaction-type-block,
+        .tile.tile-type-token-transfer>.row>.tile-label{
             width: 100%;
             flex: 0 0 auto;
             min-height: 72px;
