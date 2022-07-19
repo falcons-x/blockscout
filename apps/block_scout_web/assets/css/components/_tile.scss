@@ -39,17 +39,21 @@ $fx-tile-body-left-line-color: #f6f6f6;
       background-color: $line-color;
       z-index: 1;
     }
-    @media (max-width: 767px) {
+    @media (max-width: 991px) {
       &:before{
-        content:'';
-        position: absolute;
-        top: 16px;
+        top: 32px;
+        bottom: 32px;
         left: 0;
         box-sizing: border-box;
-        width: 4px;
+        width: 3px;
+      }
+    }
+    @media (max-width: 767px) {
+      &:before{
+        top: 16px;
+        left: 0;
+        width: 3px;
         height: 46px;
-        background-color: $line-color;
-        z-index: 1;
       }
     }
 
@@ -82,12 +86,13 @@ $fx-tile-body-left-line-color: #f6f6f6;
       margin-top: 16px;
       @include font-select('cmr_medium');
     }
-    @media (max-width: 767px) {
+    @media (max-width: 991px) {
       .tile-label{
-        font-size: 18px;
+        font-size: 12px;
         line-height: 1em;
       }
       .tile-status-label{
+        font-size: 12px;
         margin-top: 8px;
         line-height: 1em;
       }
@@ -97,6 +102,13 @@ $fx-tile-body-left-line-color: #f6f6f6;
       color: $color;
       background-color: $fx-tile-body-bg;
     }
+    @media (max-width: 991px) {
+      .tile-transaction-type-block {
+        padding-left: 3px;
+        padding-right: 3px;
+      }
+    }
+
   }
 }
 

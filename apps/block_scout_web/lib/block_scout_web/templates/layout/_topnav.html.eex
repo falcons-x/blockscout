@@ -416,6 +416,15 @@
         padding: 0;
         max-width: initial;
     }
+    @media (max-width: 991px) {
+        .tile .row.tile-body .tile-transaction-type-block,
+        .tile.tile-type-token-transfer>.row>.tile-label{
+            width: 110px;
+            flex: 0 0 110px;
+            padding: 0 3px;
+            max-width: initial;
+        }
+    }
     .tile .row.tile-body>div:nth-of-type(2){
         justify-content: center;
         padding-left: 24px;
@@ -484,9 +493,11 @@
         font-size: 14px;
         line-height: 1.5em;
     }
-    .tile.tile-type-token-transfer .tile-title+span{
-        color: var(--fx-sec-color);
-        margin-left: 12px!important;
+    @media (min-width: 768px){
+        .tile.tile-type-token-transfer .tile-title+span{
+            color: var(--fx-sec-color);
+            margin-left: 12px!important;
+        }
     }
     .tile .tile-bottom a{
         font-size: 16px;
