@@ -6,7 +6,7 @@
         <div class="fixed-filter"></div>
         <div class="logo flex">
             <a href="<%= fx_explorer_url() %>">
-                <img alt="Function X Explorer" srcset="" src="/images/web_home_nav_icon_logo.svg"/>
+                <img alt="Function X Explorer" srcset="" src="<%= static_path(@conn, "/images/web_home_nav_icon_logo.svg") %>"/>
             </a>
             <div class="layout-search-common">
                 <a class="back-link" href="https://functionx.io" target="_blank" rel="noopener noreferrer">
