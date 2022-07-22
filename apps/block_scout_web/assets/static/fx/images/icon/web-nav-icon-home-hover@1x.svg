@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>web-nav-icon-home-hover@1x</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="16" height="16"></rect>
+        <linearGradient x1="0%" y1="68%" x2="100%" y2="32%" id="linearGradient-3">
+            <stop stop-color="#1D97C7" offset="0%"></stop>
+            <stop stop-color="#5178F0" offset="52.7845228%"></stop>
+            <stop stop-color="#875FF3" offset="100%"></stop>
+        </linearGradient>
+        <path d="M8.65850461,0.576191532 L14.9985276,6.12371165 C15.2063459,6.30555268 15.2274047,6.62143399 15.0455636,6.8292523 C14.9506196,6.93775978 14.8134566,7 14.6692753,7 L1.3307247,7 C1.05458233,7 0.830724701,6.77614237 0.830724701,6.5 C0.830724701,6.35581871 0.892964917,6.2186557 1.0014724,6.12371165 L7.34149539,0.576191532 C7.71852138,0.246293791 8.28147862,0.246293791 8.65850461,0.576191532 Z" id="path-4"></path>
+        <filter x="-4.2%" y="-16.7%" width="108.4%" height="138.2%" filterUnits="objectBoundingBox" id="filter-5">
+            <feGaussianBlur stdDeviation="1" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="0" dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1  0 0 0 0.599158654 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Fx_Explorer_Web" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Web_" transform="translate(-777.000000, -22.000000)">
+            <g id="">
+                <g id="" transform="translate(777.000000, 18.000000)">
+                    <g id="web-nav-icon-home-hover" transform="translate(0.000000, 4.000000)">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <use id="" fill-opacity="0" fill="#D8D8D8" xlink:href="#path-1"></use>
+                        <g id="icon" mask="url(#mask-2)">
+                            <g transform="translate(0.000000, 1.000000)">
+                                <path d="M13,8 L13,13 C13,13.5522847 12.5522847,14 12,14 L10,14 L10,11 C10,9.8954305 9.1045695,9 8,9 C6.8954305,9 6,9.8954305 6,11 L6,11 L6,14 L4,14 C3.44771525,14 3,13.5522847 3,13 L3,8 L13,8 Z M8,10 C8.55228475,10 9,10.4477153 9,11 L9,11 L9,14 L7,14 L7,11 L7.00672773,10.8833789 C7.06449284,10.3860402 7.48716416,10 8,10 Z" id="Combined-Shape" fill="url(#linearGradient-3)"></path>
+                                <g id="Triangle" stroke-width="1" fill="none" opacity="0.395182292">
+                                    <g>
+                                        <use fill="#0552DC" fill-rule="evenodd" xlink:href="#path-4"></use>
+                                        <use fill="black" fill-opacity="1" filter="url(#filter-5)" xlink:href="#path-4"></use>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

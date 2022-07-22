@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>web-nav-icon-accounts-hover@1x</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="16" height="16"></rect>
+        <linearGradient x1="0%" y1="59.4750836%" x2="100%" y2="40.5249164%" id="linearGradient-3">
+            <stop stop-color="#1D97C7" offset="0%"></stop>
+            <stop stop-color="#5178F0" offset="52.7845228%"></stop>
+            <stop stop-color="#875FF3" offset="100%"></stop>
+        </linearGradient>
+        <circle id="path-4" cx="7" cy="4" r="4"></circle>
+        <filter x="-25.0%" y="-25.0%" width="150.0%" height="150.0%" filterUnits="objectBoundingBox" id="filter-5">
+            <feGaussianBlur stdDeviation="1" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="0" dy="2" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1  0 0 0 0.602873689 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Fx_Explorer_Web" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Web_" transform="translate(-1140.000000, -22.000000)">
+            <g id="">
+                <g id="" transform="translate(1140.000000, 18.000000)">
+                    <g id="web-nav-icon-accounts-press" transform="translate(0.000000, 4.000000)">
+                        <g id="icon">
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <g id="Mask"></g>
+                            <g mask="url(#mask-2)">
+                                <g transform="translate(1.000000, 1.000000)">
+                                    <path d="M10.1998432,7.84086734 C12.1703241,8.95743524 13.5,11.0734364 13.5,13.5 L13.5,13.5 L0.5,13.5 C0.5,11.0734364 1.82967586,8.95743524 3.80015677,7.84086734 C4.66696169,8.56497232 5.78267776,9 7,9 C8.16270474,9 9.23271629,8.6031333 10.0819616,7.93747295 Z" id="Combined-Shape" fill="url(#linearGradient-3)" fill-rule="evenodd"></path>
+                                    <g id="Oval" fill="none" opacity="0.403557484">
+                                        <use fill="#0552DC" fill-rule="evenodd" xlink:href="#path-4"></use>
+                                        <use fill="black" fill-opacity="1" filter="url(#filter-5)" xlink:href="#path-4"></use>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

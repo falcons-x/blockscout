@@ -1,0 +1,160 @@
+// general
+$primary: #080A32;
+$secondary: #1bb3dc;
+$tertiary: #94c03a;
+$additional-font: #00ffff;
+
+$fx-main: #080A32;
+$fx-main-sec: rgba($fx-main, 0.5);
+$fx-point: #671BDC;
+$fx-point-sec: #71A800;
+$fx-btn-color: #f6f6f6;
+
+// footer
+$footer-background-color: #ffffff;
+$footer-title-color: $fx-main;
+$footer-text-color: $fx-main-sec;
+$footer-item-disc-color: #0552DC;
+//.footer-logo { filter: brightness(0) invert(1); }
+
+// dashboard
+$dashboard-line-color-price: #71A800; // price left border
+$dashboard-line-color-market: #0552DC;
+$dashboard-line-color-transactions: $fx-point;
+
+$dashboard-banner-chart-legend-label-color: $fx-main-sec;
+$dashboard-stats-item-label-color: $dashboard-banner-chart-legend-label-color;
+$dashboard-banner-chart-legend-value-color: $fx-main; // chart labels
+$dashboard-stats-item-value-color: $fx-main; // stat values
+
+$dashboard-banner-chart-axis-font-color: $fx-main; // chart text
+
+$dashboard-stats-item-border-color: #0552DC; // stat border
+
+$dashboard-banner-gradient-start: #f0f0f0; // gradient begin
+
+$dashboard-banner-gradient-end: #fdfdfd; // gradient end
+
+$dashboard-banner-network-plain-container-background-color: #fafafa; // stats bg
+
+
+// navigation
+.navbar { box-shadow: 0px 0px 30px 0px rgba(21, 53, 80, 0.12); } // header shadow
+$dropdown-menu-item-hover-color: $primary !default;
+$dropdown-menu-item-hover-background: rgba($primary, .1) !default;
+$header-icon-color-hover: $primary;
+$header-icon-border-color-hover: $primary;
+
+// buttons
+$btn-line-bg: #fff; // button bg
+$btn-line-color: $fx-btn-color; // button border and font color && hover bg color
+$btn-copy-color: $fx-main; // btn copy
+$btn-qr-color: $primary; // btn qr-code
+$btn-address-card-icon-color: $primary; // btn address color
+$fx-tooltip-background-color: $fx-btn-color;
+$fx-tooltip-color: $fx-main;
+$fx-btn-qr-color: $fx-main;
+$fx-btn-line-color: $fx-btn-color;
+.download-all-transactions a.download-all-transactions-link svg path {
+	fill: $fx-main;
+}
+
+//links & tile
+$tile-body-a-color: $primary;
+$tile-type-block-color: $primary;
+$tile-type-progress-bar-color: $primary;
+//a.tile-title { color: $primary !important; }
+$fx-tile-mian-color: $fx-main;
+
+// card
+$card-background-1: $primary;
+$card-tab-active: $primary;
+
+body{
+
+.layout-container {
+	.dashboard-banner-container {
+	  background-image: linear-gradient(
+	    to bottom,
+	    $dashboard-banner-gradient-start,
+	    $dashboard-banner-gradient-end
+	  );
+		box-shadow: none;
+
+	}
+	main {
+		background-color: #ffffff ;
+	}
+	.dashboard-banner-network-plain-container{
+		&::after{
+			box-shadow: 0 0 35px 0 rgba(0, 0, 0, 0.08);
+		}
+	}
+
+}
+}
+
+// Badges
+$badge-neutral-color: $primary;
+$badge-neutral-background-color: rgba($primary, .1);
+$api-text-monospace-color: $primary;
+$badge-success-color: $fx-point-sec;
+$badge-danger-color: $fx-point;
+
+// Tokens dropdown
+.token-balance-dropdown[aria-labelledby="dropdown-tokens"] {
+  .dropdown-items .dropdown-item:hover {
+    color: $primary !important;
+  }
+}
+
+// card
+//.card{
+//	box-shadow: 0 8px 20px 0 rgba(8, 10, 50 , 0.08) !important;
+//}
+
+// modal
+$fx-modal-overlay-color: rgba(#000000, .5);
+$modal-overlay-color:rgba(#000000, .5);
+
+
+// Dark theme
+$dark-primary: #3D84FE;
+$dark-secondary: #1BB3DC;
+$dark-primary-alternate: #0552DC;
+
+$dark-fx-main: #ffffff;
+$dark-fx-main-sec: rgba($dark-fx-main, 0.5);
+$dark-fx-main-trd: rgba($dark-fx-main, 0.1);
+$dark-fx-point: #1a69f6;
+$dark-fx-bg: #1a1e29;
+$dark-fx-bg-light: #232733;
+
+$labels-dark: $dark-fx-main-sec;
+$dark-light-bg: $dark-fx-bg-light;
+$body-dark: $dark-fx-bg;
+$dark-bg: $dark-fx-bg;
+$dark-light: $dark-fx-bg-light;
+
+
+// dashboard
+$dashboard-banner-chart-axis-font-color-dark-theme: $dark-fx-main;
+
+$dashboard-banner-chart-legend-value-color-dark-theme: $dark-fx-main;
+$dashboard-stats-item-value-color-dark-theme:  $dark-fx-main;
+
+$dashboard-line-color-price-dark-theme: $dashboard-line-color-price;
+$dashboard-line-color-market-dark-theme: $dashboard-line-color-market;
+$dashboard-line-color-transactions-dark-theme: $dashboard-line-color-transactions;
+
+$dashboard-stats-item-border-color-dark-theme: $dark-fx-point;
+
+// main
+$tile-bottom-contents-color-dark-theme: #2e3341;
+$tile-border-color-dark-theme: $dark-fx-main-trd;
+
+// foot
+$footer-title-color-dark-theme: $dark-fx-main;
+$footer-background-color-dark-theme: $dark-fx-bg;
+$footer-text-color-dark-theme: $dark-fx-main-sec;
+$footer-item-disc-color-dark-theme: $dark-fx-point;

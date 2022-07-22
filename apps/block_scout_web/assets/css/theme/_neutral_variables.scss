@@ -54,11 +54,11 @@ $card-tab-active: $primary;
 
 .layout-container {
 	.dashboard-banner-container {
-	  background-image: linear-gradient(
-	    to bottom,
-	    $dashboard-banner-gradient-start,
-	    $dashboard-banner-gradient-end
-	  );
+		background-image: linear-gradient(
+										to bottom,
+										$dashboard-banner-gradient-start,
+										$dashboard-banner-gradient-end
+		);
 	}
 }
 
@@ -69,12 +69,12 @@ $api-text-monospace-color: $primary;
 
 // Tokens dropdown
 .token-balance-dropdown[aria-labelledby="dropdown-tokens"] {
-  .dropdown-items .dropdown-item:hover {
-    color: $primary !important;
-  }
+	.dropdown-items .dropdown-item:hover {
+		color: $primary !important;
+	}
 }
 
 // Dark theme
 $dark-primary: #9b62ff;
 $dark-secondary: #87e1a9;
-$dark-primary-alternate: #7e50d0; 
+$dark-primary-alternate: #7e50d0;

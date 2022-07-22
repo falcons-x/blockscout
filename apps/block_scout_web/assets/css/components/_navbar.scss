@@ -13,10 +13,174 @@ $header-link-horizontal-padding: 0.71rem;
 $navbar-logo-height: 28px !default;
 $navbar-logo-width: auto !default;
 
+@import "../fx/common";
+
+
+.fx-navbar, .fx-footer{
+  height: $fx-header-footer-height;
+  box-shadow: 0 1px 0 0 rgb(8 10 50 / 8%), 0 -1px 0 0 rgb(8 10 50 / 8%);
+  flex-shrink: 0;
+  background-color: #FFF;
+  .fx-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+.fx-navbar{
+  //position: fixed;
+  //top: 0;
+  //left: 0;
+  width: 100%;
+  z-index: 1500;
+
+  .back-link {
+    display: flex;
+    align-items: center;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+    white-space: nowrap;
+
+    .icon {
+      margin-right: 8px;
+    }
+
+    @include checkHover {
+      &:hover {
+        opacity: 1;
+        color: $fx-lighten-main-color !important;
+      }
+    }
+  }
+
+  nav {
+    a {
+      font-size: 14px;
+      line-height: 24px;
+      margin-left: 32px;
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      transition: color $fx-transition-all-time ease;
+
+      .icon {
+        margin-right: 8px;
+        filter: grayscale(1);
+      }
+      &:hover,
+      &.router-link-exact-active,
+      &.active {
+        .icon {
+          filter: grayscale(0);
+        }
+      }
+    }
+  }
+  .layout-search-common {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-left: 33px;
+  }
+  .app-nav{
+    display: none;
+  }
+}
+
+@include mediaPhone {
+  .fx-navbar {
+    height: 50px;
+    background-color: initial;
+    backdrop-filter: initial;
+    .fx-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+    .logo {
+      flex-shrink: 0;
+      height: 50px;
+      width: 100%;
+      padding-left: 16px;
+      padding-right: 19px;
+      box-sizing: border-box;
+      justify-content: space-between;
+      align-items: center;
+      background-color: rgba(255, 255, 255, 0.8);
+      backdrop-filter: saturate(180%) blur(20px);
+      // box-shadow: 0 1px 0 0 rgb(0 0 0 / 8%), 0 -1px 0 0 rgb(0 0 0 / 8%);
+      img {
+        width: 100px;
+      }
+    }
+
+    .layout-search-common {
+      display: none;
+      margin-left: 0px;
+      margin-right: 17px;
+    }
+
+    .fixed-filter {
+      position: fixed;
+      height: 100vh;
+      top: 50px;
+      right: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.8);
+      backdrop-filter: saturate(180%) blur(20px);
+    }
+
+    nav {
+      padding: 10px 16px;
+      flex-direction: column;
+      justify-content: flex-start;
+      box-sizing: border-box;
+      line-height: 36px;
+      z-index: 100;
+      a {
+        width: 100%;
+        color: #080a32;
+        margin-left: 0;
+        padding-top: 30px;
+
+        .icon {
+          width: 24px;
+          height: 24px;
+          margin-right: 16px;
+        }
+
+        &:not(.back-link) {
+
+          strong {
+            // margin-left: 40px;
+            font-size: 26px;
+          }
+        }
+
+        &.router-link-exact-active {
+          padding-left: 0px;
+          strong {
+            margin-left: 0px;
+          }
+        }
+      }
+    }
+    .display-block {
+      display: block;
+    }
+    .app-nav {
+      display: block;
+    }
+  }
+}
+
 .navbar.navbar-primary {
   background-color: $header-background-color;
   position: relative;
   z-index: 100;
+  box-shadow: 0 1px 0 0 rgb(8 10 50 / 8%), 0 -1px 0 0 rgb(8 10 50 / 8%);
 
   .nav-item {
     font-size: 14px;
@@ -80,6 +244,9 @@ $navbar-logo-width: auto !default;
         path {
           fill: $header-icon-color;
           transition: $transition-cont;
+        }
+        circle{
+          fill: $primary;
         }
       }
     }

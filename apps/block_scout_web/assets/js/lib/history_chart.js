@@ -40,6 +40,14 @@ function getMarketCapChartColor () {
   }
 }
 
+function getDashboardBannerChartAxisFontColor () {
+  if (localStorage.getItem('current-color-mode') === 'dark') {
+    return sassVariables.dashboardBannerChartAxisFontColorDarkTheme
+  } else {
+    return sassVariables.dashboardBannerChartAxisFontColor
+  }
+}
+
 function xAxe (fontColor) {
   return {
     grid,
@@ -68,6 +76,8 @@ function formatValue (val) {
   return `${numeral(val).format('0,0')}`
 }
 
+const dashboardBannerChartAxisFontColor = getDashboardBannerChartAxisFontColor()
+
 const config = {
   type: 'line',
   responsive: true,
@@ -83,7 +93,7 @@ const config = {
       mode: 'index'
     },
     scales: {
-      x: xAxe(sassVariables.dashboardBannerChartAxisFontColor),
+      x: xAxe(dashboardBannerChartAxisFontColor),
       price: {
         position: 'left',
         grid,
@@ -91,7 +101,7 @@ const config = {
           beginAtZero: true,
           callback: (value, _index, _values) => `$${numeral(value).format('0,0.00')}`,
           maxTicksLimit: 4,
-          color: sassVariables.dashboardBannerChartAxisFontColor
+          color: dashboardBannerChartAxisFontColor
         }
       },
       marketCap: {
@@ -101,7 +111,7 @@ const config = {
           callback: (_value, _index, _values) => '',
           maxTicksLimit: 6,
           drawOnChartArea: false,
-          color: sassVariables.dashboardBannerChartAxisFontColor
+          color: dashboardBannerChartAxisFontColor
         }
       },
       numTransactions: {
@@ -111,7 +121,7 @@ const config = {
           beginAtZero: true,
           callback: (value, _index, _values) => formatValue(value),
           maxTicksLimit: 4,
-          color: sassVariables.dashboardBannerChartAxisFontColor
+          color: dashboardBannerChartAxisFontColor
         }
       }
     },
@@ -119,7 +129,7 @@ const config = {
       legend,
       title: {
         display: true,
-        color: sassVariables.dashboardBannerChartAxisFontColor
+        color: dashboardBannerChartAxisFontColor
       },
       tooltip: {
         mode: 'index',

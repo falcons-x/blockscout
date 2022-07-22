@@ -1,0 +1,48 @@
+/* Color */
+@function colorRgba($color, $alpha) {
+  @return rgba($color: $color, $alpha: $alpha);
+}
+
+
+
+$fx-header-footer-height: 60px;
+//
+$fx-lighten-main-color: #080a32;
+//
+$fx-lighten-section-distinguish-color: #fbfbfb;
+// hover
+$fx-lighten-link-hover-color: #0552DC;
+//
+$fx-lighten-title-text-color: colorRgba($fx-lighten-main-color, 0.5);
+//
+$fx-lighten-text-color: colorRgba($fx-lighten-main-color, 1.0);
+
+/* Spacing */
+// sectionpadding
+$fx-section-padding: 32px;
+
+/* Animation */
+//
+$fx-transition-all-time: .3s;
+
+
+//
+//
+$media-phone-size: 1230px;
+@mixin mediaPhone() {
+  @media screen and (max-width: $media-phone-size) {
+    @content;
+  }
+}
+
+@mixin mediaPC {
+  @media screen and (min-width: 1231px) {
+    @content;
+  }
+}
+
+@mixin checkHover() {
+  @media (any-hover: hover){
+    @content;
+  }
+}

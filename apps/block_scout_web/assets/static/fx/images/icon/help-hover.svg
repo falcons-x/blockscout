@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>@2x</title>
+    <defs>
+        <linearGradient x1="0%" y1="100%" x2="100%" y2="0%" id="linearGradient-1">
+            <stop stop-color="#1D97C7" offset="0%"></stop>
+            <stop stop-color="#5178F0" offset="52.7845228%"></stop>
+            <stop stop-color="#875FF3" offset="100%"></stop>
+        </linearGradient>
+        <path d="M12.869759,12.649633 C14.0327108,11.4392253 14.75,9.80094494 14.75,7.99021402 C14.75,4.26788487 11.7279518,1.25 8,1.25 C4.27204819,1.25 1.25,4.26625797 1.25,7.99021402 C1.25,11.6767515 4.21512048,14.6669792 7.8926506,14.7255474 L7.88777108,14.730428 L12.728253,14.730428 C12.7331325,14.7288011 13.7350602,14.7434432 14.1368072,14.7499757 C14.206747,14.7515776 14.2490361,14.6734868 14.21,14.6165456 C13.9562651,14.2358528 13.2324699,13.1458351 12.869759,12.649633 Z" id="path-2"></path>
+        <filter x="-11.1%" y="-11.1%" width="122.2%" height="122.2%" filterUnits="objectBoundingBox" id="filter-3">
+            <feGaussianBlur stdDeviation="1" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="0" dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1  0 0 0 0.302502185 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+        <linearGradient x1="29.6270197%" y1="41.6250141%" x2="96.5409712%" y2="93.764501%" id="linearGradient-4">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+        <path d="M7.8476506,12.7404486 C7.29626506,12.7404486 6.875,12.3630097 6.875,11.7903436 C6.875,11.2176776 7.29626506,10.85 7.8476506,10.85 C8.39903614,10.85 8.83006024,11.2176776 8.83006024,11.7903436 C8.83006024,12.3613828 8.39903614,12.7404486 7.8476506,12.7404486 Z" id="path-5"></path>
+        <filter x="-115.1%" y="-119.0%" width="330.2%" height="338.0%" filterUnits="objectBoundingBox" id="filter-6">
+            <feGaussianBlur stdDeviation="1" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="2" dy="2" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1  0 0 0 0.603884397 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+        <linearGradient x1="36.761666%" y1="41.0427517%" x2="80.2422579%" y2="96.8071832%" id="linearGradient-7">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+        <path d="M8.30134372,9.45742798 L7.23910522,9.45742798 C6.95667845,7.76805628 9.09361925,7.00557839 9.09361925,5.89114797 C9.09361925,5.27767176 8.70763598,4.84762184 7.94822176,4.84762184 C7.3959205,4.84762184 6.90638075,5.10349383 6.43723849,5.60444803 L5.75,4.98018203 C6.3540795,4.32508808 7.09466527,3.875 8.083159,3.875 C9.37447699,3.875 10.25,4.58096007 10.25,5.79866412 C10.25,7.35393423 8.08324748,7.95302399 8.30134372,9.45742798 Z" id="path-8"></path>
+        <filter x="-52.3%" y="-40.3%" width="202.3%" height="180.6%" filterUnits="objectBoundingBox" id="filter-9">
+            <feGaussianBlur stdDeviation="1" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="2" dy="2" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1  0 0 0 0.603884397 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Fx_Explorer_Web-Copy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Web__404" transform="translate(-1256.000000, -862.000000)">
+            <g id="Foot" transform="translate(0.000000, 840.000000)">
+                <g id="Group-6" transform="translate(1244.000000, 16.000000)">
+                    <g id="Group-5">
+                        <g id="" transform="translate(12.000000, 6.000000)">
+                            <rect id="Rectangle" opacity="0" fill-rule="nonzero" x="0" y="0" width="16" height="16"></rect>
+                            <g id="Shape" transform="translate(8.000000, 8.000000) scale(-1, 1) translate(-8.000000, -8.000000) ">
+                                <use fill="url(#linearGradient-1)" fill-rule="evenodd" xlink:href="#path-2"></use>
+                                <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+                            </g>
+                            <g id="Path">
+                                <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-5"></use>
+                                <use fill="black" fill-opacity="1" filter="url(#filter-6)" xlink:href="#path-5"></use>
+                                <use stroke="url(#linearGradient-4)" stroke-width="0.5" xlink:href="#path-5"></use>
+                            </g>
+                            <g id="Path">
+                                <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-8"></use>
+                                <use fill="black" fill-opacity="1" filter="url(#filter-9)" xlink:href="#path-8"></use>
+                                <use stroke="url(#linearGradient-7)" stroke-width="0.5" xlink:href="#path-8"></use>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

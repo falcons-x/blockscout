@@ -1,3 +1,4 @@
+<%= if false do %>
 <footer class="footer">
   <div class="footer-body container">
     <!-- Logo -->
@@ -93,3 +94,30 @@
     <% end %>
   </div>
 </footer>
+<% else %>
+<footer class="fx-footer fx">
+  <div class="fx-container">
+    <p class="title-text">
+      Copyright &copy; 2018 - 2022 Function X Foundation. All Rights
+      Reserved.
+    </p>
+    <div class="other">
+      <a href="https://forum.functionx.io" class="foot-link-item-a" target="_blank" rel="noopener noreferrer"><i class="icon icon-social-footer-forum"></i></a>
+      <a href="https://t.me/functionx" class="foot-link-item-a" target="_blank" rel="noopener noreferrer"><i class="icon icon-social-footer-telegram"></i></a>
+      <a href="https://www.youtube.com/channel/UCmS83bWNR43jwEOC6EJaOyw" class="foot-link-item-a" target="_blank" rel="noopener noreferrer"><i class="icon icon-social-footer-youtube"></i></a>
+      <a href="https://medium.com/functionx" class="foot-link-item-a" target="_blank" rel="noopener noreferrer"><i class="icon icon-social-footer-medium"></i></a>
+      <a href="https://facebook.com/FunctionX.io/" class="foot-link-item-a" target="_blank" rel="noopener noreferrer"><i class="icon icon-social-footer-facebook"></i></a>
+      <a href="http://twitter.com/functionx_io" class="foot-link-item-a" target="_blank" rel="noopener noreferrer"><i class="icon icon-social-footer-twitter"></i></a>
+      <a href="https://discord.com/invite/J6k8arnyEQ" class="foot-link-item-a" target="_blank" rel="noopener noreferrer"><i class="icon icon-social-footer-discord"></i></a>
+      <a href="https://github.com/functionx" class="foot-link-item-a" target="_blank" rel="noopener noreferrer"><i class="icon icon-social-footer-github"></i></a>
+      <a href="mailto:contact@functionx.io" class="foot-link-item-a" target="_blank" rel="noopener noreferrer"><i class="icon icon-social-footer-email"></i></a>
+
+      <a class="help" href="https://support.functionx.io/hc/en-us" target="_blank" rel="noopener noreferrer">
+        <i class="icon icon-footer-help"></i>
+        <strong>Help</strong>
+      </a>
+    </div>
+  </div>
+</footer>
+<% end %>
+
