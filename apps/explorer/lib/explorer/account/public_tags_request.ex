@@ -38,7 +38,7 @@ defmodule Explorer.Account.PublicTagsRequest do
     timestamps()
   end
 
-  @local_fields [:__meta__, :inserted_at, :updated_at, :addresses_array, :id, :request_id]
+  @local_fields [:__meta__, :inserted_at, :updated_at, :id, :request_id]
 
   def to_map(%__MODULE__{} = request) do
     association_fields = request.__struct__.__schema__(:associations)
@@ -70,7 +70,6 @@ defmodule Explorer.Account.PublicTagsRequest do
   def changeset_without_constraints(%__MODULE__{} = public_tags_request \\ %__MODULE__{}, attrs \\ %{}) do
     public_tags_request
     |> cast(attrs, @attrs ++ @required_attrs)
-    |> extract_addresses_array()
   end
 
   def create(attrs) do
@@ -80,19 +79,8 @@ defmodule Explorer.Account.PublicTagsRequest do
     |> AirTable.submit()
   end
 
-  defp extract_addresses_array(%Changeset{} = changeset) do
-    with {:fetch, {_src, addresses}} <- {:fetch, fetch_field(changeset, :addresses)},
-         false <- is_nil(addresses),
-         addresses_array <- String.split(addresses, ";") do
-      put_change(changeset, :addresses_array, addresses_array)
-    else
-      _ ->
-        changeset
-    end
-  end
-
-  defp trim_empty_addresses(%{addresses: addresses} = attrs) do
-    filtered_addresses = Enum.filter(addresses, fn addr -> addr != "" end)
+  defp trim_empty_addresses(%{addresses: addresses} = attrs) when is_list(addresses) do
+    filtered_addresses = Enum.filter(addresses, fn addr -> addr != "" and !is_nil(addr) end)
     Map.put(attrs, :addresses, if(filtered_addresses == [], do: [""], else: filtered_addresses))
   end
 
