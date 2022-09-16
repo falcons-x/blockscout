@@ -53,7 +53,7 @@ config :block_scout_web, BlockScoutWeb.Chain,
   show_maintenance_alert: System.get_env("SHOW_MAINTENANCE_ALERT", "false") == "true",
   enable_testnet_label: System.get_env("SHOW_TESTNET_LABEL", "false") == "true",
   testnet_label_text: System.get_env("TESTNET_LABEL_TEXT", "Testnet"),
-  fx_explorer_url: System.get_env("FX_EXPLORER_URL", "https://explorer.functionx.io")
+  fx_explorer_url: System.get_env("FX_EXPLORER_URL", "https://starscan.io/")
 
 config :block_scout_web,
   link_to_other_explorers: System.get_env("LINK_TO_OTHER_EXPLORERS") == "true",
