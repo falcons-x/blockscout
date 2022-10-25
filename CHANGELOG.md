@@ -15,6 +15,7 @@
 ### Fixes
 
 - [#6309](https://github.com/blockscout/blockscout/pull/6309) - Fix read contract bug and change address tx count
+- [#6303](https://github.com/blockscout/blockscout/pull/6303) - Fix some UI bugs
 - [#6243](https://github.com/blockscout/blockscout/pull/6243) - Fix freezes on `/blocks` page
 - [#6162](https://github.com/blockscout/blockscout/pull/6162) - Extend token symbol type varchar(255) -> text
 - [#6158](https://github.com/blockscout/blockscout/pull/6158) - Add missing clause for merge_twin_vyper_contract_with_changeset function
@@ -26,11 +27,10 @@
 - [#6118](https://github.com/blockscout/blockscout/pull/6118) - Fix unfetched token balances
 - [#6163](https://github.com/blockscout/blockscout/pull/6163) - Fix rate limit logs
 - [#6223](https://github.com/blockscout/blockscout/pull/6223) - Fix coin_id test
-- [#6133](https://github.com/blockscout/blockscout/pull/6133) - Prevent logger from truncating response from rust verifier service in case of an error
+- [#6336](https://github.com/blockscout/blockscout/pull/6336) - Fix sending request on each key in token search
 
 ### Chore
 
-- [#6325](https://github.com/blockscout/blockscout/pull/6325) - Set http_only attribute of account authorization cookie to false
 - [#6240](https://github.com/blockscout/blockscout/pull/6240) - Elixir 1.14 support
 - [#6204](https://github.com/blockscout/blockscout/pull/6204) - Refactor contract libs render, CONTRACT_VERIFICATION_MAX_LIBRARIES, refactor parsing integer env vars in config
 - [#6195](https://github.com/blockscout/blockscout/pull/6195) - Docker compose configs improvements: Redis container name and persistent storage
