@@ -96,6 +96,7 @@ defmodule Explorer.Token.InstanceMetadataRetriever do
   def fetch_json(uri)
       when uri in [
              %{@token_uri => {:error, "(-32015) VM execution error."}},
+             %{@token_uri => {:error, "(3) execution reverted (0x)"}},
              %{@uri => {:error, "(-32015) VM execution error."}}
            ] do
     {:ok, %{error: @vm_execution_error}}
@@ -106,6 +107,10 @@ defmodule Explorer.Token.InstanceMetadataRetriever do
   end
 
   def fetch_json(%{@uri => {:error, "(-32015) VM execution error." <> _}}) do
+    {:ok, %{error: @vm_execution_error}}
+  end
+
+  def fetch_json(%{@token_uri => {:error, "(3) execution reverted (0x)" <> _}}) do
     {:ok, %{error: @vm_execution_error}}
   end
 
@@ -204,8 +209,10 @@ defmodule Explorer.Token.InstanceMetadataRetriever do
   end
 
   defp fetch_metadata(uri) do
-    case HTTPoison.get(uri) do
+    Logger.info(["fetch metadata by uri:", inspect(uri)])
+    case HTTPoison.get(uri, [], proxy: {:socks5, 'localhost', 1080}) do
       {:ok, %Response{body: body, status_code: 200, headers: headers}} ->
+        Logger.info(["fetch metadata body:", inspect(body)])
         if Enum.member?(headers, {"Content-Type", "image/png"}) do
           json = %{"image" => uri}
 
