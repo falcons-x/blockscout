@@ -1,7 +1,7 @@
 defmodule BlockScoutWeb.Tokens.Instance.OverviewView do
   use BlockScoutWeb, :view
 
-  alias BlockScoutWeb.CurrencyHelpers
+  alias BlockScoutWeb.{CurrencyHelpers, Controller}
   alias Explorer.Chain
   alias Explorer.Chain.{Address, SmartContract, Token}
   alias Explorer.SmartContract.Helper
@@ -12,7 +12,7 @@ defmodule BlockScoutWeb.Tokens.Instance.OverviewView do
   import BlockScoutWeb.APIDocsView, only: [blockscout_url: 1, blockscout_url: 2]
 
   @tabs ["token-transfers", "metadata"]
-  @stub_image "/images/controller.svg"
+  @stub_image Controller.full_path("/images/controller.svg")
 
   def token_name?(%Token{name: nil}), do: false
   def token_name?(%Token{name: _}), do: true
