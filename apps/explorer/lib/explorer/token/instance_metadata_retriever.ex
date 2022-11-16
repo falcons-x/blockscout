@@ -210,7 +210,7 @@ defmodule Explorer.Token.InstanceMetadataRetriever do
 
   defp fetch_metadata(uri) do
     Logger.info(["fetch metadata by uri:", inspect(uri)])
-    case HTTPoison.get(uri, [], proxy: {:socks5, 'localhost', 1080}) do
+    case HTTPoison.get(uri) do
       {:ok, %Response{body: body, status_code: 200, headers: headers}} ->
         Logger.info(["fetch metadata body:", inspect(body)])
         if Enum.member?(headers, {"Content-Type", "image/png"}) do
@@ -232,6 +232,7 @@ defmodule Explorer.Token.InstanceMetadataRetriever do
         {:error, body}
 
       {:error, %Error{reason: reason}} ->
+        Logger.info(["fetch metadata error:", inspect(reason)])
         {:error, reason}
     end
   rescue
