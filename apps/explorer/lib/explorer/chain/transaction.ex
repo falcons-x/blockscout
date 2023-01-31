@@ -676,8 +676,15 @@ defmodule Explorer.Chain.Transaction do
 
     {:ok, result}
   rescue
-    _ ->
-      Logger.warn(fn -> ["Could not decode input data for transaction: ", Hash.to_iodata(hash)] end)
+    e ->
+      Logger.warn(fn ->
+        [
+          "Could not decode input data for transaction: ",
+          Hash.to_iodata(hash),
+          Exception.format(:error, e, __STACKTRACE__)
+        ]
+      end)
+
       {:error, :could_not_decode}
   end
 
@@ -688,8 +695,15 @@ defmodule Explorer.Chain.Transaction do
 
     {:ok, mapping}
   rescue
-    _ ->
-      Logger.warn(fn -> ["Could not decode input data for transaction: ", Hash.to_iodata(hash)] end)
+    e ->
+      Logger.warn(fn ->
+        [
+          "Could not decode input data for transaction: ",
+          Hash.to_iodata(hash),
+          Exception.format(:error, e, __STACKTRACE__)
+        ]
+      end)
+
       {:error, :could_not_decode}
   end
 
