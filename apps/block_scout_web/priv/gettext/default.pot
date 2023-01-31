@@ -81,7 +81,7 @@ msgstr ""
 msgid ") may be added for each contract. Click the Add Library button to add an additional one."
 msgstr ""
 
-#: lib/block_scout_web/templates/layout/app.html.eex:240
+#: lib/block_scout_web/templates/layout/app.html.eex:175
 #, elixir-autogen, elixir-format
 msgid "- We're indexing this chain right now. Some of the counts may be inaccurate."
 msgstr ""
@@ -2000,7 +2000,6 @@ msgstr ""
 msgid "Position %{index}"
 msgstr ""
 
-#: lib/block_scout_web/templates/transaction/_decoded_input.html.eex:18
 #: lib/block_scout_web/templates/transaction/_decoded_input.html.eex:32
 #, elixir-autogen, elixir-format
 msgid "Potential matches from our contract method database:"
@@ -3534,4 +3533,9 @@ msgstr ""
 #: lib/block_scout_web/templates/transaction/overview.html.eex:202
 #, elixir-autogen, elixir-format
 msgid "Transaction Action"
+msgstr ""
+
+#: lib/block_scout_web/templates/transaction/_decoded_input.html.eex:18
+#, elixir-autogen, elixir-format
+msgid "Potential matches from contract method database:"
 msgstr ""
