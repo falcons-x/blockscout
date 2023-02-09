@@ -105,8 +105,8 @@ defmodule Explorer.Token.InstanceMetadataRetriever do
              %{@token_uri => {:error, "(-32015) VM execution error."}},
              %{@uri => {:error, "(-32015) VM execution error."}},
              %{@token_uri => {:error, "(-32000) execution reverted"}},
-             %{@uri => {:error, "(-32000) execution reverted"}}
-             %{@token_uri => {:error, "(3) execution reverted (0x)"}},
+             %{@uri => {:error, "(-32000) execution reverted"}},
+             %{@token_uri => {:error, "(3) execution reverted (0x)"}}
            ] do
     {:ok, %{error: @vm_execution_error}}
   end
@@ -127,7 +127,7 @@ defmodule Explorer.Token.InstanceMetadataRetriever do
     {:ok, %{error: @vm_execution_error}}
   end
 
-  def fetch_json(%{@token_uri => {:error, "(3) execution reverted (0x)" <> _}}) do
+  def fetch_json(%{@token_uri => {:error, "(3) execution reverted (0x)" <> _}}, _hex_token_id) do
     {:ok, %{error: @vm_execution_error}}
   end
 
