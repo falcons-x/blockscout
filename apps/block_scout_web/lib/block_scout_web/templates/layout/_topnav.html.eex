@@ -11,7 +11,7 @@
                 <img alt="Function X Explorer" srcset="" src="<%= static_path(@conn, "/images/web_home_nav_icon_logo.svg") %>"/>
             </a>
             <div class="layout-search-common">
-                <a class="back-link" href="https://functionx.io" target="_blank" rel="noopener noreferrer">
+                <a class="back-link" href="<%= fx_explorer_url() %>" target="_blank" rel="noopener noreferrer">
                     <i class="icon icon-back"></i>
                     <strong>Back to Function X</strong>
                 </a>
@@ -22,13 +22,14 @@
             </div>
         </div>
         <nav class="phone-not-show flex-center">
-            <a href="<%= fx_explorer_url() %>" target="_blank" rel="noopener noreferrer" ><i class="icon icon-head-home"></i><strong>Home</strong></a>
-            <a href="<%= fx_explorer_url() %>/fxcore/blocks" target="_blank" rel="noopener noreferrer" ><i class="icon icon-head-blocks"></i><strong>Blocks</strong></a>
-            <a href="<%= fx_explorer_url() %>/fxcore/txs" target="_blank" rel="noopener noreferrer" ><i class="icon icon-head-transactions"></i><strong>Transactions</strong></a>
-            <a href="<%= fx_explorer_url() %>/fxcore/validators" target="_blank" rel="noopener noreferrer" ><i class="icon icon-head-validator"></i><strong>Validators</strong></a>
-            <a href="<%= fx_explorer_url() %>/fxcore/datas" target="_blank" rel="noopener noreferrer" ><i class="icon icon-head-data"></i><strong>Statistics</strong></a>
-            <a href="<%= fx_explorer_url() %>/fxcore/proposals" target="_blank" rel="noopener noreferrer" ><i class="icon icon-head-Proposals"></i><strong>Proposals</strong></a>
-            <a class="back-link" href="https://functionx.io" target="_blank" rel="noopener noreferrer">
+            <a href="<%= fx_explorer_url() %>" target="_blank" rel="noopener noreferrer" ><i class="icon"></i><strong>Home</strong></a>
+            <a href="<%= fx_explorer_url() %>/fxcore/blocks" target="_blank" rel="noopener noreferrer" ><i class="icon"></i><strong>Blocks</strong></a>
+            <a href="<%= fx_explorer_url() %>/fxcore/txs" target="_blank" rel="noopener noreferrer" ><i class="icon"></i><strong>Transactions</strong></a>
+            <a href="<%= fx_explorer_url() %>/fxcore/validators" target="_blank" rel="noopener noreferrer" ><i class="icon"></i><strong>Validators</strong></a>
+            <a href="<%= fx_explorer_url() %>/fxcore/datas" target="_blank" rel="noopener noreferrer" ><i class="icon"></i><strong>Statistics</strong></a>
+            <a href="<%= fx_explorer_url() %>/fxcore/proposals" target="_blank" rel="noopener noreferrer" ><i class="icon"></i><strong>Proposals</strong></a>
+            <a href="https://forum.starscan.io" target="_blank" rel="noopener noreferrer" ><i class="icon"></i><strong>Forum</strong></a>
+            <a class="back-link" href="<%= fx_explorer_url() %>" target="_blank" rel="noopener noreferrer">
                 <i class="icon icon-back"></i>
                 <strong>Back to Function X</strong>
             </a>
@@ -111,7 +112,7 @@
               </span>
               <%= gettext("Tokens") %>
             </a>
-            <div class="dropdown-menu" aria-labeledby="navbarTransactionsDropdown"> 
+            <div class="dropdown-menu" aria-labeledby="navbarTransactionsDropdown">
               <%= link(
                     gettext("All"),
                     class: "dropdown-item #{tab_status("tokens", @conn.request_path)}",
@@ -133,7 +134,7 @@
               </span>
               <%= gettext("APIs") %>
             </a>
-            <div class="dropdown-menu" aria-labeledby="navbarTransactionsDropdown"> 
+            <div class="dropdown-menu" aria-labeledby="navbarTransactionsDropdown">
               <%= link(
                     gettext("GraphQL"),
                     class: "dropdown-item #{tab_status("graphiql", @conn.request_path)}",
@@ -188,24 +189,24 @@
             </span>
             <%= subnetwork_title() %>
           </a>
-          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown"> 
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
             <%= if Enum.count(main_nets) > 0 do %>
-              <a class="dropdown-item header division">Mainnets</a> 
-              <%= for %{url: url, title: title} <- main_nets do %>  
+              <a class="dropdown-item header division">Mainnets</a>
+              <%= for %{url: url, title: title} <- main_nets do %>
                 <a class="dropdown-item" href="<%= url %>"><%= title %></a>
               <% end %>
             <% end %>
             <%= if Enum.count(test_nets) > 0 do %>
-              <a class="dropdown-item header division">Testnets</a> 
-              <%= for %{url: url, title: title} <- test_nets do %> 
+              <a class="dropdown-item header division">Testnets</a>
+              <%= for %{url: url, title: title} <- test_nets do %>
                 <a class="dropdown-item" href="<%= url %>"><%= title %></a>
               <% end %>
             <% end %>
             <%= if Enum.count(other_nets) > 0 do %>
-              <a class="dropdown-item header division">Other Networks</a> 
-              <%= for %{url: url, title: title} <- other_nets do %>  
+              <a class="dropdown-item header division">Other Networks</a>
+              <%= for %{url: url, title: title} <- other_nets do %>
                 <a class="dropdown-item" href="<%= url %>"><%= title %></a>
-              <% end %> 
+              <% end %>
             <% end %>
           </div>
         </li>
