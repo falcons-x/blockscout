@@ -366,7 +366,6 @@ config :explorer, :datadog, port: ConfigHelper.parse_integer_env_var("DATADOG_PO
 config :explorer, Explorer.Chain.Cache.TransactionActionTokensData,
   max_cache_size: ConfigHelper.parse_integer_env_var("INDEXER_TX_ACTIONS_MAX_TOKEN_CACHE_SIZE", 100_000)
 
-
 ###############
 ### Indexer ###
 ###############
