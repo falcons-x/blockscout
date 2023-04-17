@@ -17,6 +17,8 @@
 
 ### Chore
 
+- [#7292](https://github.com/blockscout/blockscout/pull/7292) - Allow Node 16+ version
+
 <details>
   <summary>Dependencies version bumps</summary>
 
