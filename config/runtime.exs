@@ -68,7 +68,7 @@ config :block_scout_web, BlockScoutWeb.Chain,
   has_emission_funds: false,
   show_maintenance_alert: ConfigHelper.parse_bool_env_var("SHOW_MAINTENANCE_ALERT"),
   enable_testnet_label: ConfigHelper.parse_bool_env_var("SHOW_TESTNET_LABEL"),
-  testnet_label_text: System.get_env("TESTNET_LABEL_TEXT", "Testnet")
+  testnet_label_text: System.get_env("TESTNET_LABEL_TEXT", "Testnet"),
   fx_explorer_url: System.get_env("FX_EXPLORER_URL", "https://starscan.io/")
 
 config :block_scout_web, :footer,
