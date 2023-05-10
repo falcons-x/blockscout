@@ -108,54 +108,54 @@ $('.send-public-tag-request-button').click((_event) => {
 })
 
 $(document).ready(() => {
-  let timer
-  const waitTime = 500
-  const observer = new MutationObserver((mutations) => {
-    // @ts-ignore
-    if (mutations[0].target.hidden) {
-      return
-    }
-
-    const $results = $('li[id^="autoComplete_result_"]')
-
-    clearTimeout(timer)
-    timer = setTimeout(() => {
-      let eventName = 'Occurs searching according to substring at the nav bar'
-      let eventProperties = {
-        search: $('.main-search-autocomplete').val() || $('.main-search-autocomplete-mobile').val()
-      }
-
-      analytics.trackEvent(eventName, eventProperties)
-
-      eventName = 'Search list displays at the nav bar'
-      // @ts-ignore
-      eventProperties = {
-        resultsNumber: $results.length,
-        results: $results.map((_i, el) => {
-          // @ts-ignore
-          return el.children[1].innerText
-        })
-      }
-
-      analytics.trackEvent(eventName, eventProperties)
-    }, waitTime)
-
-    $results.click((event) => {
-      const eventName = 'Search item click at the nav bar'
-      const eventProperties = {
-        item: event.currentTarget.innerText
-      }
-
-      analytics.trackEvent(eventName, eventProperties)
-    })
-  })
-  observer.observe($('#autoComplete_list_1')[0], {
-    attributeFilter: ['hidden'],
-    childList: true
-  })
-  observer.observe($('#autoComplete_list_2')[0], {
-    attributeFilter: ['hidden']
-  })
+  // let timer
+  // const waitTime = 500
+  // const observer = new MutationObserver((mutations) => {
+  //   // @ts-ignore
+  //   if (mutations[0].target.hidden) {
+  //     return
+  //   }
+  //
+  //   const $results = $('li[id^="autoComplete_result_"]')
+  //
+  //   clearTimeout(timer)
+  //   timer = setTimeout(() => {
+  //     let eventName = 'Occurs searching according to substring at the nav bar'
+  //     let eventProperties = {
+  //       search: $('.main-search-autocomplete').val() || $('.main-search-autocomplete-mobile').val()
+  //     }
+  //
+  //     analytics.trackEvent(eventName, eventProperties)
+  //
+  //     eventName = 'Search list displays at the nav bar'
+  //     // @ts-ignore
+  //     eventProperties = {
+  //       resultsNumber: $results.length,
+  //       results: $results.map((_i, el) => {
+  //         // @ts-ignore
+  //         return el.children[1].innerText
+  //       })
+  //     }
+  //
+  //     analytics.trackEvent(eventName, eventProperties)
+  //   }, waitTime)
+  //
+  //   $results.click((event) => {
+  //     const eventName = 'Search item click at the nav bar'
+  //     const eventProperties = {
+  //       item: event.currentTarget.innerText
+  //     }
+  //
+  //     analytics.trackEvent(eventName, eventProperties)
+  //   })
+  // })
+  // observer.observe($('#autoComplete_list_1')[0], {
+  //   attributeFilter: ['hidden'],
+  //   childList: true
+  // })
+  // observer.observe($('#autoComplete_list_2')[0], {
+  //   attributeFilter: ['hidden']
+  // })
 })
 
 $(document).click(function (event) {
