@@ -14,7 +14,7 @@ defmodule BlockScoutWeb.CSPHeader do
     czilladx_url = "https://request-global.czilladx.com"
     coinzillatag_url = "https://coinzillatag.com"
     trustwallet_url = "https://raw.githubusercontent.com/trustwallet/assets/"
-    walletconnect_urls = "wss://*.bridge.walletconnect.org https://registry.walletconnect.org/data/wallets.json"
+    walletconnect_urls = "https://wallet-connect.pundix.com/bridge/ wss://*.bridge.walletconnect.org https://registry.walletconnect.org/data/wallets.json"
     json_rpc_url = Application.get_env(:block_scout_web, :json_rpc)
 
     Controller.put_secure_browser_headers(conn, %{

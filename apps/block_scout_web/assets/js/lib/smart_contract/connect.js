@@ -7,7 +7,7 @@ import { openWarningModal } from '../modals'
 // @ts-ignore
 const instanceChainIdStr = document.getElementById('js-chain-id').value
 const instanceChainId = parseInt(instanceChainIdStr, 10)
-const walletConnectOptions = { rpc: {}, chainId: instanceChainId }
+const walletConnectOptions = { rpc: {}, chainId: instanceChainId, bridge: 'https://wallet-connect.pundix.com/bridge/' }
 // @ts-ignore
 const jsonRPC = document.getElementById('js-json-rpc').value
 walletConnectOptions.rpc[instanceChainId] = jsonRPC
