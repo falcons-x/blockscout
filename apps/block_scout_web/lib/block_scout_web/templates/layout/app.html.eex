@@ -38,7 +38,7 @@
       <%= if false do %>
       <%= render_existing(@view_module, "_metatags.html", assigns) || render("_default_title.html") %>
       <% end %>
-      <title>Function X StarScan</title>
+      <title>PundiScan</title>
 
     <script defer data-cfasync="false">
       window.localized = {
