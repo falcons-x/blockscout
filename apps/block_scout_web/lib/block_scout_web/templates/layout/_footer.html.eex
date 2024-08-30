@@ -104,7 +104,7 @@
       Reserved.
     </p>
     <div class="other">
-      <a href="https://forum.functionx.io" class="foot-link-item-a" target="_blank" rel="noopener noreferrer"><i class="icon icon-social-footer-forum"></i></a>
+      <a href="https://forum.pundiscan.io" class="foot-link-item-a" target="_blank" rel="noopener noreferrer"><i class="icon icon-social-footer-forum"></i></a>
       <a href="https://t.me/functionx" class="foot-link-item-a" target="_blank" rel="noopener noreferrer"><i class="icon icon-social-footer-telegram"></i></a>
       <a href="https://www.youtube.com/channel/UCmS83bWNR43jwEOC6EJaOyw" class="foot-link-item-a" target="_blank" rel="noopener noreferrer"><i class="icon icon-social-footer-youtube"></i></a>
       <a href="https://medium.com/functionx" class="foot-link-item-a" target="_blank" rel="noopener noreferrer"><i class="icon icon-social-footer-medium"></i></a>
@@ -125,4 +125,3 @@
   </div>
 </footer>
 <% end %>
-
